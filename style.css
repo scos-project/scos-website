@@ -1,0 +1,267 @@
+:root {
+    --bg: #0A1224;
+    /* deep navy */
+    --bg-soft: #0E1A33;
+    /* panel navy */
+    --text: #E7ECF5;
+    /* near white */
+    --muted: #A9B9D8;
+    /* muted text */
+    --accent: #64B5F6;
+    /* white/blue accent */
+    --accent-2: #34D399;
+    /* optional green accent */
+    --border: #1F2B47;
+    /* hairline border */
+    --container: 1180px;
+    --radius: 14px;
+    --shadow: 0 6px 30px rgba(0, 0, 0, .25);
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, -apple-system, Segoe UI, Roboto, Inter, Noto Sans, Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background: var(--bg);         /* solid color only */
+}
+
+.container {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 20px
+}
+
+
+/* Navbar */
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: saturate(140%) blur(8px);
+    background: rgba(10, 18, 36, .6);
+    border-bottom: 1px solid rgba(255, 255, 255, .06)
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700
+}
+
+.brand-logo {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+    display: inline-block
+}
+
+.links{display:flex; align-items:center; gap:16px}
+.nav-link{color:var(--text); text-decoration:none; font-weight:600; font-size:14px; padding:8px 10px; border-radius:8px; border:1px solid transparent}
+.nav-link:hover{background:rgba(255,255,255,.06)}
+.nav-link.active{background:rgba(255,255,255,.12); border-color:rgba(255,255,255,.12)}
+@media (max-width: 720px){ .links{ display:none } }
+
+.badge {
+    font-size: 12px;
+    padding: 6px 10px;
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 999px;
+    color: #cfe3ff
+}
+
+.badge.inline {
+    display: inline-block;
+    margin-bottom: 10px
+}
+
+
+/* Hero */
+.hero {
+    padding: 80px 0 40px
+}
+
+.title {
+    font-size: 44px;
+    line-height: 1.1;
+    font-weight: 900;
+    margin: 8px 0
+}
+
+.subtitle {
+    font-size: 18px;
+    color: var(--muted);
+    max-width: 760px
+}
+
+.cta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 18px
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-weight: 700;
+    border: 1px solid rgba(255, 255, 255, .12);
+    transition: .2s transform, .2s background
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #071120;
+    border-color: transparent
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px)
+}
+
+.btn-ghost:hover {
+    background: rgba(255, 255, 255, .06)
+}
+
+/* Ghost button text color stays white even with href */
+.btn-ghost,
+.btn-ghost:link,
+.btn-ghost:visited {
+  color: var(--text);
+  background: transparent;
+}
+
+/* Hover/focus still uses subtle bg */
+.btn-ghost:hover,
+.btn-ghost:focus {
+  color: var(--text);
+  background: rgba(255,255,255,.06);
+}
+
+/* Optional: make disabled buttons truly non-clickable */
+.btn[aria-disabled="true"] {
+  pointer-events: none;
+  opacity: .8;
+}
+
+.disclaimer {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #c7d7f5
+}
+
+
+/* Sections */
+section {
+    padding: 56px 0
+}
+
+.h3 {
+    font-size: 20px;
+    margin: 0 0 10px
+}
+
+.lead {
+    color: var(--muted);
+    max-width: 900px
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 20px
+}
+
+.card {
+    background: linear-gradient(0deg, rgba(255, 255, 255, .02), rgba(255, 255, 255, .02));
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px;
+    box-shadow: var(--shadow)
+}
+
+.card h3 {
+    margin: 0 0 6px;
+    font-size: 18px
+}
+
+.note {
+    font-size: 14px;
+    color: var(--muted)
+}
+
+
+.callout {
+    background: rgba(100, 181, 246, .10);
+    border-left: 4px solid var(--accent);
+    padding: 14px 16px;
+    border-radius: 10px
+}
+
+
+/* Lists */
+ul {
+    padding-left: 18px
+}
+
+li {
+    margin: 6px 0
+}
+
+
+/* Footer */
+footer {
+    border-top: 1px solid rgba(255, 255, 255, .06);
+    padding: 28px 0 60px;
+    color: var(--muted);
+    font-size: 14px
+}
+
+
+/* Small helpers */
+.spacer {
+    height: 12px
+}
+
+/* White content links everywhere (NOT buttons or navbar) */
+a:not(.btn):not(.nav-link),
+a:not(.btn):not(.nav-link):link,
+a:not(.btn):not(.nav-link):visited {
+  color: var(--text);                  /* white-ish */
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(255,255,255,.35);
+  transition: text-decoration-color .15s ease;
+}
+
+a:not(.btn):not(.nav-link):hover,
+a:not(.btn):not(.nav-link):focus {
+  color: var(--text);                  /* stay white */
+  text-decoration-color: rgba(255,255,255,.7);
+}
+
+/* Ensure buttons/nav don't pick up underlines */
+.btn, .nav-link { text-decoration: none; }
+
+/* Force-remove any leftover layered backgrounds */
+html, body { background-image: none; background-color: var(--bg); }

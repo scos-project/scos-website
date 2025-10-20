@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Features — SteamConsoleOS (SCOS)</title>
+  <meta name="description"
+    content="SCOS features: console-style Windows shell for Steam, boots into Steam Big Picture Mode, controller-first, gaming-only." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <img src="../images/logo.png" class="brand-logo" alt="SCOS logo" width="28" height="28" loading="eager"
+          fetchpriority="high">
+        <span>SCOS</span>
+      </div>
+
+      <nav class="links" aria-label="Primary">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../pages/download.html" class="nav-link">Download</a>
+        <a href="../pages/features.html" class="nav-link">Features</a>
+        <a href="../pages/docs.html" class="nav-link">Documentation</a>
+        <a href="../pages/faq.html" class="nav-link">FAQ</a>
+        <a href="../pages/contact.html" class="nav-link">Contact</a>
+      </nav>
+      <span class="badge">Public Beta: available now</span>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="badge inline">Powered by Windows · Built for Steam</div>
+        <h1 class="title">Features</h1>
+        <p class="subtitle">
+          SCOS turns a Windows PC into a living-room console for Steam. It boots straight into
+          <strong>Steam Big Picture Mode</strong>, uses a <strong>controller-first</strong> interface, and
+          focuses on one thing: <strong>gaming</strong>.
+        </p>
+        <p class="disclaimer">SCOS is independent and not affiliated with Microsoft or Valve.</p>
+      </div>
+    </section>
+
+    <!-- PILLARS -->
+    <section id="pillars">
+      <div class="container">
+        <h2>Core Pillars</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Console Experience</h3>
+            <p class="note">Boots into Steam Big Picture Mode with a clean, couch-ready UI—no desktop or taskbar in
+              daily use.</p>
+          </div>
+          <div class="card">
+            <h3>Native Windows Compatibility</h3>
+            <p class="note">Run your Steam library natively on Windows—no Proton/compat layers to tune.</p>
+          </div>
+          <div class="card">
+            <h3>Controller-First</h3>
+            <p class="note">Navigate everything with a gamepad after setup. Keyboard/mouse only needed during
+              installation.</p>
+          </div>
+          <div class="card">
+            <h3>Bloat-Free</h3>
+            <p class="note">Only what’s needed to play and watch. Keep focus on games, not background apps.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHELL & BOOT -->
+    <section id="shell">
+      <div class="container">
+        <h2>Shell & Boot Flow</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Shell Replacement</h3>
+            <p class="note">SCOS replaces <code>explorer.exe</code> with Steam Big Picture Mode after installation.</p>
+          </div>
+          <div class="card">
+            <h3>Direct-to-Steam</h3>
+            <p class="note">Every startup goes directly to Steam Home. Follow the on-screen instructions to start
+              playing.</p>
+          </div>
+          <div class="card">
+            <h3>Smart Power</h3>
+            <p class="note">Sleep, wake, and shutdown designed for living-room flow.</p>
+          </div>
+          <div class="card">
+            <h3>Quick Menu (Planned)</h3>
+            <p class="note">Controller overlay for Wi-Fi, audio, power, and profile switching.</p>
+          </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="callout">
+          SCOS feels like a console but keeps native Windows drivers and performance under the hood.
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFILES -->
+    <section id="profiles">
+      <div class="container">
+        <h2>Profiles (Planned)</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Gaming</h3>
+            <p class="note">Performance-forward defaults for your library and launchers.</p>
+          </div>
+          <div class="card">
+            <h3>Streaming</h3>
+            <p class="note">Media-friendly tweaks for apps and video playback.</p>
+          </div>
+          <div class="card">
+            <h3>Kids Mode</h3>
+            <p class="note">Simplified home and parental controls.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREINSTALLED APPS -->
+    <section id="apps">
+      <div class="container">
+        <h2>Preinstalled Apps</h2>
+        <ul>
+          <li><strong>Steam (Big Picture Mode)</strong> — living-room UI and game launcher</li>
+          <li><strong>EA app</strong> — ready for EA titles that require it</li>
+          <li><strong>Unified Remote Server</strong> — for occasional text/input without a keyboard</li>
+        </ul>
+        <p class="note">More to come in a future version. Other dependencies (runtimes, redistributables) can be
+          auto-installed by Steam when you launch games.</p>
+
+        <div class="spacer"></div>
+        <h3 class="h3">Known Issue (Public Beta)</h3>
+        <div class="card">
+          <p><strong>Unified Remote silent-install bug:</strong> during installation it may be detected but <strong>not
+              actually installed</strong>.</p>
+          <ul>
+            <li>SCOS doesn’t expose the Windows desktop after installation, so you <strong>cannot manually install apps
+                later</strong>.</li>
+            <li><strong>Impact:</strong> You can play Steam games that don’t require entering credentials outside Steam.
+              Avoid titles that force external launcher sign-ins (e.g., Rockstar Games Launcher, some EA titles) until
+              the fix ships.</li>
+          </ul>
+          <p class="note"><strong>Recommended prep (until fix):</strong> Until the Unified Remote issue is fixed, avoid titles that require external launcher sign-ins (e.g., Rockstar / some EA) unless you completed those sign-ins on a standard Windows desktop beforehand.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTROLLERS -->
+    <section id="controllers">
+      <div class="container">
+        <h2>Controller Support</h2>
+        <ul>
+          <li><strong>USB-only</strong> at launch (wired controllers)</li>
+          <li><strong>Bluetooth pairing is planned</strong> for a future version</li>
+          <li>Works with Xbox / PlayStation / XInput-compatible gamepads over USB</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- REQUIREMENTS SUMMARY -->
+    <section id="requirements">
+      <div class="container">
+        <h2>Requirements (Summary)</h2>
+        <ul>
+          <li><strong>PC:</strong> Windows-capable gaming PC for your TV</li>
+          <li><strong>Memory:</strong> 16&nbsp;GB RAM</li>
+          <li><strong>Storage:</strong> 1&nbsp;TB SSD (OS + games)</li>
+          <li><strong>Network:</strong> <strong>Ethernet required</strong> to complete installation (plug in before you
+            begin)</li>
+          <li><strong>Controllers:</strong> USB gamepads; <strong>USB hub required</strong> for multiple controllers
+          </li>
+          <li><strong>Peripherals:</strong> Keyboard &amp; mouse only for installation</li>
+          <li><strong>Apps:</strong> Unified Remote (mobile) for entering credentials outside Steam when needed</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ROADMAP -->
+    <section id="roadmap">
+      <div class="container">
+        <h2>Roadmap</h2>
+        <ul>
+          <li><strong>Alpha:</strong> Shell handoff to Steam, controller-only flow, Unified Remote integration</li>
+          <li><strong>Public Beta (coming soon):</strong> wider testing, per-game presets, parental controls, network
+            setup from the couch</li>
+          <li><strong>1.0:</strong> Theme variants, accessibility suite, first-run wizard, <strong>Bluetooth controller
+              pairing</strong>, more preinstalled launchers</li>
+        </ul>
+        <div class="cta">
+          <a href="../pages/download.html" class="btn btn-primary">Get Ready to Install</a>
+          <a href="../pages/docs.html" class="btn btn-ghost">Read the Docs</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>© <span id="year"></span> SCOS Project. All rights reserved.</div>
+      <div>SCOS is independent and not affiliated with Microsoft or Valve.</div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

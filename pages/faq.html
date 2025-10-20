@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FAQ — SteamConsoleOS (SCOS)</title>
+    <meta name="description"
+        content="Frequently asked questions about SCOS: installation, controllers, networking, Unified Remote, SteamOS vs SCOS, troubleshooting, privacy, and roadmap." />
+    <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div class="nav">
+        <div class="container nav-inner">
+            <div class="brand">
+                <img src="../images/logo.png" class="brand-logo" alt="SCOS logo" width="28" height="28" loading="eager"
+                    fetchpriority="high">
+                <span>SCOS</span>
+            </div>
+
+            <nav class="links" aria-label="Primary">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../pages/download.html" class="nav-link">Download</a>
+                <a href="../pages/features.html" class="nav-link">Features</a>
+                <a href="../pages/docs.html" class="nav-link">Documentation</a>
+                <a href="../pages/faq.html" class="nav-link">FAQ</a>
+                <a href="../pages/contact.html" class="nav-link">Contact</a>
+            </nav>
+            <span class="badge">Public Beta: available now</span>
+        </div>
+    </div>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container">
+                <div class="badge inline">Frequently Asked Questions</div>
+                <h1 class="title">FAQ</h1>
+                <p class="subtitle">Answers to common questions about installing and using SteamConsoleOS (SCOS).</p>
+            </div>
+        </section>
+
+        <!-- GENERAL -->
+        <section id="general">
+            <div class="container">
+                <h2>General</h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3>Is SCOS a new operating system?</h3>
+                        <p class="note">
+                            Yes. SCOS is installed as a <strong>fresh operating system powered by Windows</strong>, from
+                            an ISO.
+                            It is <em>not</em> a program that tweaks your existing Windows install.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>What’s the goal of SCOS?</h3>
+                        <p class="note">
+                            Deliver a <strong>console-style living-room experience</strong> with <strong>native Windows
+                                compatibility</strong>.
+                            SCOS boots straight into <strong>Steam Big Picture</strong> and hides desktop clutter.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Who is SCOS for?</h3>
+                        <p class="note">
+                            Players who want a <strong>Windows-based console feel</strong> on a TV, with full
+                            compatibility for Steam
+                            (and other PC launchers documented in the <a href="../pages/docs.html">Docs</a>).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INSTALLATION -->
+        <section id="installation">
+            <div class="container">
+                <h2>Installation</h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3>How do I install SCOS?</h3>
+                        <p class="note">
+                            Create a bootable USB from the SCOS ISO, boot from it, and follow the installer.
+                            See the step-by-step guide on the <a href="../pages/download.html">Download</a> page.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Will installation erase my data?</h3>
+                        <p class="note">
+                            It can. Selecting a target disk/partition may <strong>erase/format</strong> that drive.
+                            <strong>Back up your data</strong> before you begin.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Do I need Ethernet?</h3>
+                        <p class="note">
+                            Yes. An <strong>Ethernet connection is required</strong> to complete installation.
+                            Plug the cable in <strong>before</strong> you start.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Why do I see screen flicker after install?</h3>
+                        <p class="note">
+                            Windows Update is installing your <strong>GPU drivers</strong>. This is normal.
+                            When it finishes, <strong>reboot once</strong> so Steam detects the driver correctly.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTROLLERS -->
+        <section id="controllers">
+            <div class="container">
+                <h2>Controllers</h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3>When should I plug in controllers?</h3>
+                        <p class="note">
+                            <strong>After</strong> GPU drivers finish installing and you reboot.
+                            Plugging in too early can make Windows select the controller as an audio device.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>USB vs Bluetooth?</h3>
+                        <p class="note">
+                            <strong>USB-only at launch</strong> (wired controllers). Bluetooth pairing is planned for a
+                            future version.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Which controllers work?</h3>
+                        <p class="note">
+                            Xbox/PlayStation and other <strong>XInput-compatible</strong> gamepads (over USB).
+                            Use a <strong>USB hub</strong> for multiple controllers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AUDIO FIX -->
+        <section id="audio">
+            <div class="container">
+                <h2>Audio picks the controller — how do I fix it?</h2>
+                <ol>
+                    <li>In Steam Big Picture: <strong>Menu → Settings → In-Game Voice</strong>.</li>
+                    <li>Under <strong>Microphone</strong>, choose <strong>“Select Device”</strong> to open the Windows
+                        sound popup.</li>
+                    <li><strong>Controller cursor:</strong> Hold the <strong>PS/Xbox button</strong> and move the
+                        <strong>right stick</strong> to move the cursor.
+                        <strong>RB</strong> = left click, <strong>LB</strong> = right click. (Xbox mapping expected
+                        similar.)
+                    </li>
+                    <li>In the <strong>Playback</strong> tab, set your TV/AVR/speakers device (e.g., <em>High Definition
+                            Audio Controller</em> or <em>Realtek Audio</em>) as <strong>Default</strong>.</li>
+                    <li>In the <strong>Recording</strong> tab, set your preferred <strong>Microphone</strong> as Default
+                        (if needed).</li>
+                </ol>
+                <div class="callout">While moving/clicking the cursor, keep holding the <strong>PS/Xbox button</strong>
+                    the whole time.</div>
+            </div>
+        </section>
+
+        <!-- NETWORKING -->
+        <section id="networking">
+            <div class="container">
+                <h2>Networking</h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3>Can I use Wi-Fi?</h3>
+                        <p class="note">
+                            Installation requires <strong>Ethernet</strong>. For living-room setups without Ethernet
+                            drop,
+                            many users bridge via a Wi-Fi repeater with an Ethernet port.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Do I need Unified Remote?</h3>
+                        <p class="note">
+                            If a game/launcher requires credentials outside Steam, the <strong>Unified Remote</strong>
+                            mobile app
+                            is typically used to input text (see known beta limitation below).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- UNIFIED REMOTE / LAUNCHERS -->
+        <section id="unified-remote">
+            <div class="container">
+                <h2>Unified Remote &amp; Launchers</h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3>Known issue in Public Beta</h3>
+                        <p class="note">
+                            The Unified Remote installer may be detected but <strong>not actually installed</strong>
+                            during setup.
+                            Manual installation isn’t possible later because SCOS doesn’t expose the desktop.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>What’s the impact?</h3>
+                        <p class="note">
+                            You can play Steam games that don’t require outside-of-Steam sign-ins.
+                            Avoid titles that force launcher logins (e.g., Rockstar/EA) until the fix ships,
+                            or pre-sign-in on a standard Windows install beforehand.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEAMOS VS SCOS -->
+        <section id="steamvscos">
+            <div class="container">
+                <h2>SteamOS vs SCOS</h2>
+                <div class="card">
+                    <p class="note">
+                        SteamOS (Linux) often relies on <strong>Proton/Wine</strong> to run Windows games. It’s
+                        fantastic for many titles,
+                        but can struggle with external launchers and strict anti-cheat. <strong>SCOS is
+                            Windows-based</strong>,
+                        so games and launchers run <strong>natively</strong> without a translation layer, while keeping
+                        a console-simple flow.
+                    </p>
+                    <p class="note">See <a href="../pages/docs.html#compare">Documentation → SteamOS vs SCOS</a> for a
+                        detailed comparison.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TROUBLESHOOTING -->
+        <section id="troubleshooting">
+            <div class="container">
+                <h2>Troubleshooting</h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3>Black screen after exiting Steam</h3>
+                        <p class="note">
+                            Exiting Steam Desktop Mode can leave a black screen. <strong>Restart</strong> and you’ll
+                            boot back into Big Picture.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>GPU not recognized by Steam</h3>
+                        <p class="note">
+                            Wait for Windows Update to install drivers (the screen may flicker). Then do a
+                            <strong>single reboot</strong>.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>No audio on TV/AVR</h3>
+                        <p class="note">
+                            If the controller was selected as the default audio device, fix it with the steps in
+                            <a href="#audio">Audio picks the controller</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRIVACY -->
+        <section id="privacy">
+            <div class="container">
+                <h2>Privacy</h2>
+                <div class="card">
+                    <p class="note">
+                        SCOS avoids telemetry where it’s safe to do so and ships bloat-free.
+                        The website’s contact form is embedded from a third-party provider; data is handled by that
+                        provider.
+                        See <a href="../pages/docs.html#privacy">Docs → Privacy &amp; Data</a> for details.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROADMAP -->
+        <section id="roadmap">
+            <div class="container">
+                <h2>Roadmap (High-Level)</h2>
+                <ul>
+                    <li>Fix Unified Remote auto-install</li>
+                    <li>More pre-installed launchers</li>
+                    <li>Bluetooth controller support</li>
+                    <li>Wi-Fi improvements</li>
+                    <li>Controller navigation refinements</li>
+                    <li>Windows 11-based build (future)</li>
+                </ul>
+                <div class="cta">
+                    <a href="../pages/download.html" class="btn btn-primary">Install SCOS</a>
+                    <a href="../pages/docs.html" class="btn btn-ghost">Read the Docs</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div>© <span id="year"></span> SCOS Project. All rights reserved.</div>
+            <div>SCOS is independent and not affiliated with Microsoft or Valve.</div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

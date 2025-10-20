@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Download — SteamConsoleOS (SCOS)</title>
+  <meta name="description"
+    content="Download SteamConsoleOS (SCOS). Public Beta coming soon. Console-style Windows shell for Steam, boots into Steam Big Picture Mode." />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* Download dropdown */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown .btn {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .dropdown .caret {
+      margin-left: 8px;
+      font-size: 12px;
+      opacity: .85;
+    }
+
+    .menu {
+      position: absolute;
+      right: 0;
+      top: calc(100% + 8px);
+      min-width: 240px;
+      padding: 6px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      display: none;
+      z-index: 100;
+    }
+
+    .menu a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .menu a:hover {
+      background: rgba(255, 255, 255, .06);
+    }
+
+    .menu a.disabled {
+      opacity: .6;
+      pointer-events: none;
+    }
+
+    .dropdown[aria-expanded="true"] .menu {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <img src="../images/logo.png" class="brand-logo" alt="SCOS logo" width="28" height="28" loading="eager"
+          fetchpriority="high">
+        <span>SCOS</span>
+      </div>
+
+      <nav class="links" aria-label="Primary">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../pages/download.html" class="nav-link">Download</a>
+        <a href="../pages/features.html" class="nav-link">Features</a>
+        <a href="../pages/docs.html" class="nav-link">Documentation</a>
+        <a href="../pages/faq.html" class="nav-link">FAQ</a>
+        <a href="../pages/contact.html" class="nav-link">Contact</a>
+      </nav>
+      <span class="badge">Public Beta: available now</span>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="badge inline">Powered by Windows · Built for Steam</div>
+        <h1 class="title">Download SCOS</h1>
+        <p class="subtitle">
+          Public Beta is now available. SCOS replaces the Windows shell with <strong>Steam Big Picture Mode</strong>, so
+          you boot
+          straight into Steam on every startup. <strong>Gaming-only, controller-first.</strong>
+        </p>
+        <div class="cta">
+          <div class="dropdown" id="dlHero" aria-expanded="false">
+            <a href="#" class="btn btn-primary" id="dlBtnHero" aria-haspopup="true" aria-expanded="false">
+              Download <span class="caret">▾</span>
+            </a>
+            <div class="menu" role="menu" aria-label="Download options">
+              <!-- TODO: replace # with your real beta ISO URL -->
+              <a href="https://download1349.mediafire.com/g71nmrk6p2agiMVg4hS69Zvpys0LnncBP7bsfnXV0Htucgr7KIpB5geu9Em0tHwTnCNcuqp__i61KxaUsfQxgVhej9NzBmzmSNQBSenpfAwENq1OVxlLuC-zCtHmb8qZ-blITy6xEtZa1WVt5neSBE1XmDKR6Zz_iklDX99pgrk/hdzvc1o6sdazt80/SCOS_Beta_English_x64.iso"
+                target="_blank" role="menuitem">Public Beta (.iso)</a>
+              <a href="#" role="menuitem" class="disabled" aria-disabled="true" title="Coming soon">Public Release
+                (Soon)</a>
+            </div>
+          </div>
+
+          <!-- keep release notes button for later -->
+          <a class="btn btn-ghost" aria-disabled="true">Release Notes (Soon)</a>
+        </div>
+
+        <p class="disclaimer">SCOS is independent and not affiliated with Microsoft or Valve.</p>
+      </div>
+    </section>
+
+    <!-- BEFORE YOU START -->
+    <section id="get-ready">
+      <div class="container">
+        <h2>Before You Start</h2>
+        <p class="lead">Have these ready for a smooth install:</p>
+        <ul>
+          <li><strong>PC:</strong> Windows-capable gaming PC connected to your TV</li>
+          <li><strong>Memory:</strong> 16&nbsp;GB RAM</li>
+          <li><strong>Storage:</strong> 1&nbsp;TB SSD (OS + games)</li>
+          <li><strong>Controllers:</strong> USB gamepads; <strong>USB hub required</strong> for multiple controllers
+          </li>
+          <li><strong>Network:</strong> <strong>Ethernet connection is required to complete installation</strong> —
+            <u>plug the cable in <em>before</em> you begin</u>
+          </li>
+          <li><strong>Peripherals:</strong> Keyboard &amp; mouse only for installation</li>
+          <li><strong>Apps:</strong> Unified Remote (mobile) if you need to type credentials outside Steam</li>
+          <li><strong>Important:</strong> <u>Do not plug in any controllers</u> during installation and initial graphics
+            driver setup. Plug them in <em>after</em> the screen flicker finishes and you reboot.</li>
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- KNOWN ISSUE -->
+    <section id="known-issue">
+      <div class="container">
+        <h2>Known Issue (Public Beta)</h2>
+        <div class="card">
+          <p><strong>Unified Remote silent-install bug:</strong> during installation it may be detected but <strong>not
+              actually installed</strong>.</p>
+          <ul>
+            <li>SCOS does not expose the Windows desktop after installation, so you <strong>cannot manually install apps
+                later</strong>.</li>
+            <li><strong>Impact:</strong> You can play Steam games that don’t require entering credentials outside Steam.
+              Avoid titles that force external launcher sign-ins (e.g., Rockstar Games Launcher, some EA titles) until
+              the fix ships.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTALL STEPS -->
+    <section id="install">
+      <div class="container">
+        <h2>Install SCOS (Fresh OS Install)</h2>
+        <p class="lead">
+          SCOS installs as a <strong>new operating system powered by Windows</strong> (from an ISO). It does
+          <em>not</em> modify your existing Windows.
+        </p>
+
+        <div class="card" style="margin-bottom:16px">
+          <p><strong>⚠️ Important:</strong> Installing SCOS to a disk/partition can <strong>erase data</strong>. Back up
+            everything important before you begin.</p>
+        </div>
+
+        <ol>
+          <li><strong>Back up</strong> your data.</li>
+          <li><strong>Download the SCOS ISO</strong> (Public Beta).</li>
+          <li><strong>Create a bootable USB</strong> (≥ 16&nbsp;GB) using
+            <a href="https://rufus.ie/" target="_blank" rel="noopener">Rufus</a> or
+            <a href="https://etcher.balena.io/" target="_blank" rel="noopener">BalenaEtcher</a> and select the SCOS ISO.
+          </li>
+          <li><strong>Plug in Ethernet</strong> to the PC <em>before</em> you start (required to complete setup).</li>
+          <li><strong>Leave controllers unplugged</strong> for now.</li>
+          <li><strong>Boot from the USB drive</strong> (use your BIOS/UEFI boot menu key, e.g., F12/Del/Esc).</li>
+          <li>Select the <strong>target drive/partition</strong> for SCOS and start installation
+            <em>(⚠️ this may erase/format that drive)</em>.
+          </li>
+          <li><strong>Hands-off install:</strong> SCOS automatically installs Windows, required components/drivers, and
+            Steam.</li>
+        </ol>
+
+        <div class="callout">
+          When installation finishes, the system will reboot into Steam’s first-run (OOBE) experience.
+        </div>
+      </div>
+    </section>
+
+    <!-- AFTER INSTALL -->
+    <section id="after">
+      <div class="container">
+        <h2>After Installation</h2>
+
+        <h3 class="h3">GPU Driver Setup (first minutes)</h3>
+        <ul>
+          <li><strong>Windows Update</strong> will automatically fetch and install your <strong>GPU drivers</strong>.
+          </li>
+          <li>The screen may <strong>flicker</strong> during this process — this is normal.</li>
+          <li>When it completes, <strong>reboot once</strong> so Steam can detect the GPU properly.</li>
+          <li><strong>Only after the flicker/reboot</strong>, plug in your <strong>USB controller(s)</strong>.</li>
+        </ul>
+
+        <div class="card" style="margin-top:12px">
+          <h3 class="h3">Why wait to plug in controllers?</h3>
+          <p class="note">
+            If a controller is connected too early, Windows/SCOS may detect it as an <strong>audio device</strong> and
+            select it by default.
+            Waiting until graphics install finishes prevents your sound from being routed to the controller.
+          </p>
+        </div>
+
+        <h3 class="h3" style="margin-top:20px">If sound still goes to the controller</h3>
+        <ol>
+          <li>Open <strong>Steam Big Picture</strong> menu → <strong>Settings → In-Game Voice</strong>.</li>
+          <li>Under <strong>Microphone</strong>, select <strong>“Select Device”</strong> to open the Windows sound
+            popup.</li>
+          <li><strong>Controller-mouse emulation:</strong>
+            <ul>
+              <li><strong>Hold the PS (or Xbox) button</strong> and move the <strong>right stick</strong> to move the
+                cursor.</li>
+              <li><strong>RB</strong> = left click, <strong>LB</strong> = right click.</li>
+              <li>(Xbox mapping not fully tested, but expected to behave similarly.)</li>
+            </ul>
+          </li>
+          <li>In the <strong>Playback</strong> tab, choose your TV/AVR/speakers device (often <em>High Definition Audio
+              Controller</em> or <em>Realtek Audio</em>) and set it as <strong>Default</strong>.</li>
+          <li>Optionally switch to the <strong>Recording</strong> tab and set your preferred <strong>Microphone</strong>
+            as Default.</li>
+          <li>Apply/OK and return to Steam.</li>
+          <li><strong>Important:</strong> while moving/clicking with the cursor, keep <strong>holding the PS/Xbox
+              button</strong> the whole time.</li>
+        </ol>
+
+        <h3 class="h3" style="margin-top:20px">First-Run in Steam (OOBE)</h3>
+        <ol>
+          <li><strong>Select Language</strong></li>
+          <li><strong>Select Timezone</strong></li>
+          <li><strong>Sign in to Steam</strong> (credentials or Steam Guard)</li>
+        </ol>
+
+        <div class="spacer"></div>
+        <div class="card">
+          <h3 class="h3">Daily Use</h3>
+          <ul>
+            <li>System boots straight to <strong>Steam Big Picture</strong>.</li>
+            <li><strong>USB controllers</strong> at launch; Bluetooth is planned for a future version.</li>
+            <li>Controller-first navigation; keyboard/mouse are not required for daily use.</li>
+          </ul>
+        </div>
+
+        <div class="spacer"></div>
+        <div class="card">
+          <h3 class="h3">Games Compatibility Note (Beta)</h3>
+          <p class="note">Until the Unified Remote issue is fixed, avoid titles that require external launcher sign-ins
+            (e.g., Rockstar / some EA) unless you completed those sign-ins on a standard Windows desktop beforehand.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOWNLOADS -->
+    <section id="download">
+      <div class="container">
+        <h2>Downloads</h2>
+        <div class="cta">
+          <div class="dropdown" id="dlMain" aria-expanded="false">
+            <a href="#" class="btn btn-primary" id="dlBtnMain" aria-haspopup="true" aria-expanded="false">
+              Download <span class="caret">▾</span>
+            </a>
+            <div class="menu" role="menu" aria-label="Download options">
+              <!-- TODO: replace # with your real beta ISO + checksum URLs -->
+              <a href="https://download1349.mediafire.com/g71nmrk6p2agiMVg4hS69Zvpys0LnncBP7bsfnXV0Htucgr7KIpB5geu9Em0tHwTnCNcuqp__i61KxaUsfQxgVhej9NzBmzmSNQBSenpfAwENq1OVxlLuC-zCtHmb8qZ-blITy6xEtZa1WVt5neSBE1XmDKR6Zz_iklDX99pgrk/hdzvc1o6sdazt80/SCOS_Beta_English_x64.iso"
+                role="menuitem">Public Beta (.iso)</a>
+              <a href="/releases/SCOS_Public_Beta.sha256" class="disabled" aria-disabled="true"
+                role="menuitem">Checksums (Soon)</a>
+              <a href="#" role="menuitem" class="disabled" aria-disabled="true" title="Coming soon">Public Release
+                (Soon)</a>
+            </div>
+          </div>
+
+          <a class="btn btn-ghost" href="#" id="github">View on GitHub (Soon)</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>© <span id="year"></span> SCOS Project. All rights reserved.</div>
+      <div>SCOS is independent and not affiliated with Microsoft or Valve.</div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script>
+    // Reusable dropdown toggle handler
+    function initDropdown(dropId, btnId) {
+      const dropdown = document.getElementById(dropId);
+      const btn = document.getElementById(btnId);
+      if (!dropdown || !btn) return;
+
+      const toggle = (open) => {
+        dropdown.setAttribute('aria-expanded', String(open));
+        btn.setAttribute('aria-expanded', String(open));
+      };
+
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const open = dropdown.getAttribute('aria-expanded') === 'true';
+        toggle(!open);
+      });
+
+      // Close on outside click / ESC
+      document.addEventListener('click', (e) => {
+        if (!dropdown.contains(e.target)) toggle(false);
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') toggle(false);
+      });
+    }
+
+    // Wire both dropdowns (hero + downloads section)
+    initDropdown('dlHero', 'dlBtnHero');
+    initDropdown('dlMain', 'dlBtnMain');
+  </script>
+</body>
+
+</html>

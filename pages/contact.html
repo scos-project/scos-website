@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — SteamConsoleOS (SCOS)</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* page-local tweaks for the embed */
+    .embed-card {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .embed-wrap {
+      position: relative;
+      height: 72vh;
+      min-height: 520px;
+    }
+
+    .embed-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      background: var(--bg-soft);
+    }
+
+    .fallback {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <img src="../images/logo.png" class="brand-logo" alt="SCOS logo" width="28" height="28" loading="eager"
+          fetchpriority="high">
+        <span>SCOS</span>
+      </div>
+
+      <nav class="links" aria-label="Primary">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../pages/download.html" class="nav-link">Download</a>
+        <a href="../pages/features.html" class="nav-link">Features</a>
+        <a href="../pages/docs.html" class="nav-link">Documentation</a>
+        <a href="../pages/faq.html" class="nav-link">FAQ</a>
+        <a href="../pages/contact.html" class="nav-link">Contact</a>
+      </nav>
+      <span class="badge">Public Beta: available now</span>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="badge inline">Contact</div>
+        <h1 class="title">Get in touch</h1>
+        <p class="subtitle">Questions, feedback, partnerships — use the form below.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="card embed-card">
+          <div class="embed-wrap">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSfFTlKkOwMNjbot-Mx0u2Ca7WiCRwRhmfAQtBm9PLL_glilrA/viewform?embedded=true"
+              width="640" height="689" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+          </div>
+        </div>
+        <p class="fallback note">
+          If the form doesn’t load, <a href="https://forms.gle/BuhtttZ6P53GSSrN7" target="_blank" rel="noopener">open it
+            in a
+            new tab</a>.
+        </p>
+        <p class="note">
+          By submitting this form, you acknowledge your data is handled by the external form provider.
+          Learn more in our <a href="../pages/docs.html#privacy">Privacy &amp; Data</a> section.
+        </p>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>© <span id="year"></span> SCOS Project. All rights reserved.</div>
+      <div>SCOS is independent and not affiliated with Microsoft or Valve.</div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>
