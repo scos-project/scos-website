@@ -265,3 +265,98 @@ a:not(.btn):not(.nav-link):focus {
 
 /* Force-remove any leftover layered backgrounds */
 html, body { background-image: none; background-color: var(--bg); }
+
+/* Tables */
+#comparison .card {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  color: var(--text);
+}
+
+thead {
+  background: rgba(255, 255, 255, .05);
+}
+
+th,
+td {
+  padding: 12px 14px;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid var(--border);
+}
+
+th {
+  font-weight: 800;
+  color: var(--text);
+}
+
+td {
+  color: var(--text);
+}
+
+tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, .025);
+}
+
+tbody tr:hover {
+  background: rgba(100, 181, 246, .08);
+}
+
+
+/* Blog article layout */
+.article-hero {
+  padding-bottom: 28px;
+}
+
+.article-section {
+  padding-top: 18px;
+}
+
+.article-container {
+  max-width: 900px;
+}
+
+.article-content {
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.article-content h2 {
+  margin-top: 42px;
+  margin-bottom: 14px;
+  font-size: 28px;
+  line-height: 1.25;
+}
+
+.article-content p {
+  color: var(--text);
+  margin: 0 0 18px;
+}
+
+.article-content ul {
+  margin-top: 10px;
+  margin-bottom: 24px;
+}
+
+.article-content li {
+  margin: 8px 0;
+}
+
+.article-meta {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 34px;
+}
+
+.article-content .callout {
+  margin: 28px 0;
+}
+
+.article-content .cta {
+  margin-top: 42px;
+}

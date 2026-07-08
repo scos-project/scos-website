@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SCOS — Living-Room Console for Steam</title>
+  <title>SCOS — Windows-Based Steam Console Experience</title>
   <meta name="description"
-    content="SCOS turns a Windows PC into a living-room console for Steam. Boots into Steam Big Picture Mode, controller-first, gaming-only." />
+    content="SCOS Standard is a Windows-based Steam console environment built with SCOS Builder. Create a SCOS installation ISO from your own Windows ISO and boot into a controller-first Steam experience." />
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -14,21 +14,17 @@
   <!-- NAVBAR -->
   <div class="nav">
     <div class="container nav-inner">
-      <div class="brand">
-        <img src="images/logo.png" class="brand-logo" alt="SCOS logo" width="28" height="28" loading="eager"
-          fetchpriority="high">
-        <span>SCOS</span>
-      </div>
 
       <nav class="links" aria-label="Primary">
         <a href="index.html" class="nav-link">Home</a>
         <a href="pages/download.html" class="nav-link">Download</a>
+        <a href="pages/news.html" class="nav-link">News</a>
         <a href="pages/features.html" class="nav-link">Features</a>
         <a href="pages/docs.html" class="nav-link">Documentation</a>
         <a href="pages/faq.html" class="nav-link">FAQ</a>
         <a href="pages/contact.html" class="nav-link">Contact</a>
       </nav>
-      <span class="badge">Standard Edition Beta: available now</span>
+      <span class="badge">SCOS Standard Public Beta: available now</span>
     </div>
   </div>
 
@@ -36,31 +32,43 @@
     <!-- HERO -->
     <section class="hero" id="home">
       <div class="container">
-        <div class="badge inline">Powered by Windows · Built for Steam</div>
+        <div class="badge inline">Powered by Windows · Built for Steam · Created with SCOS Builder</div>
         <h1 class="title">SCOS</h1>
         <p class="subtitle">
-          <strong>Welcome to SCOS</strong> — a custom Windows-based gaming console OS that brings
-          the Steam Big Picture experience to your living-room PC. <strong>SCOS is a new operating system powered by
-            Windows</strong>
-          (installed fresh from an image) — <em>not</em> a program that tweaks your existing Windows install. It
-          streamlines Windows 10
-          into a console-friendly environment with controller support, kiosk-style lockdown, and pre-installed gaming
-          essentials.
+          <strong>SCOS Standard</strong> is a Windows-based Steam console environment for living-room gaming.
+          It turns a fresh Windows installation into a controller-first experience built around
+          <strong>Steam Big Picture / Steam Gamepad UI</strong>, with normal desktop access restricted in the public
+          Standard edition.
+        </p>
+        <p class="subtitle">
+          SCOS is built using <strong>SCOS Builder</strong>. You provide your own official Windows ISO, SCOS Builder
+          downloads the official SCOS Build Package, creates a SCOS installation ISO, and SCOS installs as a separate
+          console-style environment.
         </p>
         <div class="cta">
-          <a href="pages/download.html" class="btn btn-primary">Download</a>
-          <a href="#" id="github" class="btn btn-ghost">View on GitHub (Soon)</a>
+          <a href="pages/download.html" class="btn btn-primary">Download SCOS Builder</a>
+          <a href="https://github.com/scos-project" id="github" class="btn btn-ghost">View on GitHub</a>
         </div>
-        <p class="disclaimer">SCOS is independent and not affiliated with Microsoft or Valve.</p>
+        <p class="disclaimer">SCOS is independent and not affiliated with Microsoft, Valve, Steam, or any third-party launcher.</p>
+      </div>
+    </section>
+
+    <section id="release-status">
+      <div class="container">
+        <div class="callout">
+          <strong>Current public release:</strong>
+          SCOS Builder <strong>v0.1.2</strong> · SCOS Build Package <strong>v0.3.6.4</strong> · Edition:
+          <strong>Standard</strong> · Channel: <strong>stable</strong>.
+        </div>
       </div>
     </section>
 
     <section id="os-note">
       <div class="container">
         <div class="callout">
-          <strong>Important:</strong> SCOS is installed as a <strong>separate operating system</strong> powered by
-          Windows — it does not modify your current Windows setup. See <a href="pages/docs.html">Documentation</a> for
-          install details.
+          <strong>Important:</strong> SCOS does not include, provide, sell, or activate Windows.
+          You must provide your own official Windows ISO. Windows activation remains separate from SCOS and is the user's
+          responsibility. See <a href="pages/docs.html">Documentation</a> for install details.
         </div>
       </div>
     </section>
@@ -68,13 +76,12 @@
     <!-- BETA WARNING -->
     <section id="beta">
       <div class="container">
-        <h2>⚠️ Beta Warning</h2>
+        <h2>⚠️ Public Beta Warning</h2>
         <div class="card">
           <p>
-            This is a <strong>beta release</strong> intended for testers and developers. Expect bugs, incomplete
-            features,
-            and frequent updates. Please back up your data before installation and report issues on our GitHub
-            repository.
+            SCOS Standard is currently a <strong>public beta</strong>. It is intended for testers, developers, and
+            advanced users. Expect bugs, incomplete features, and frequent updates. Please back up your data before
+            installation and report issues through the SCOS GitHub repositories.
           </p>
         </div>
       </div>
@@ -84,16 +91,77 @@
     <section id="overview">
       <div class="container">
         <h2>Overview</h2>
-        <p class="lead">SCOS transforms a standard Windows 10 PC into a console-like device optimized for gaming with
-          controllers.</p>
+        <p class="lead">
+          SCOS transforms a compatible Windows installation into a console-like Steam gaming environment optimized for
+          controllers and living-room use.
+        </p>
         <ul>
-          <li><strong>Auto-login &amp; Steam Big Picture at startup</strong></li>
-          <li><strong>Controller &amp; network driver integration</strong></li>
-          <li><strong>Locked-down UI</strong> to prevent accidental desktop access</li>
-          <li><strong>Pre-installed essentials</strong> (see <a href="pages/docs.html">Documentation</a> for details)
-          </li>
-          <li><strong>Custom scripts</strong> to suppress unwanted shortcuts and dialogs</li>
+          <li><strong>Built with SCOS Builder</strong> from your own Windows ISO</li>
+          <li><strong>Auto-login and Steam shell</strong> for a console-style startup</li>
+          <li><strong>Steam Big Picture / Steam Gamepad UI</strong> as the main experience</li>
+          <li><strong>Locked-down Standard environment</strong> to reduce accidental desktop access</li>
+          <li><strong>Gaming essentials installed during setup</strong> such as Steam and supported helper tools</li>
+          <li><strong>Windows compatibility</strong> for games, launchers, drivers, and anti-cheat systems that expect Windows</li>
         </ul>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works">
+      <div class="container">
+        <h2>How SCOS Works</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>1. Provide a Windows ISO</h3>
+            <p class="note">
+              SCOS Builder starts from an official Windows ISO provided by the user. SCOS does not distribute Windows.
+            </p>
+          </div>
+          <div class="card">
+            <h3>2. Build the SCOS ISO</h3>
+            <p class="note">
+              SCOS Builder downloads the official SCOS Build Package from GitHub, injects the setup files, and creates
+              the final bootable SCOS installation ISO.
+            </p>
+          </div>
+          <div class="card">
+            <h3>3. Install SCOS Standard</h3>
+            <p class="note">
+              The generated ISO installs SCOS Standard, applies the console restrictions, and prepares the Steam-focused
+              environment.
+            </p>
+          </div>
+          <div class="card">
+            <h3>4. Boot into Steam</h3>
+            <p class="note">
+              After setup, SCOS Standard boots directly into the Steam console experience instead of a normal Windows
+              desktop.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOTABLE USB WARNING -->
+    <section id="usb-warning">
+      <div class="container">
+        <h2>Bootable USB Warning</h2>
+        <div class="card">
+          <p>
+            When creating a bootable USB from a SCOS ISO, do <strong>not</strong> enable Windows installation
+            customization options.
+          </p>
+          <p class="note">
+            If your USB creation tool shows options such as bypassing TPM, Secure Boot, RAM requirements, creating a
+            local account, disabling data collection, changing regional settings, or modifying Windows setup behavior,
+            leave all of those options unchecked.
+          </p>
+          <p class="note">
+            SCOS already includes its own unattended setup configuration. Extra customization options may conflict with
+            SCOS setup files and cause the installation to fail or behave incorrectly. For SCOS ISOs, write the ISO
+            as-is.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -105,42 +173,108 @@
           <div class="card">
             <h3>The Problem</h3>
             <p class="note">
-              Many players without a Steam Deck build living-room PCs with SteamOS (Linux). That setup often relies on
-              <strong>compatibility layers like Proton/Wine</strong> to run Windows games. While amazing for many
-              titles,
-              it can stumble with:
+              SteamOS is a powerful Linux-based gaming system, but some Windows games, launchers, and anti-cheat systems
+              may still require native Windows behavior or developer-enabled Linux/Proton support.
             </p>
             <ul>
-              <li><strong>External launchers</strong> (EA App, Rockstar Games Launcher, Ubisoft Connect)</li>
-              <li><strong>Strict anti-cheat/DRM</strong> that expect native Windows behavior</li>
-              <li>Login overlays/services that don’t play nicely through Proton/Wine</li>
+              <li><strong>Some anti-cheat games</strong> may not run when Linux/Proton support is not enabled</li>
+              <li><strong>External launchers</strong> may require extra work outside Steam</li>
+              <li><strong>Windows-only tools and drivers</strong> may not be available natively on Linux</li>
             </ul>
-            <p class="note">Result: friction with EA Sports FC, GTA/RDR2, and similar titles, or lots of tweaking.</p>
+            <p class="note">
+              Result: some living-room gaming builds still need Windows compatibility, but Windows itself does not feel
+              like a console by default.
+            </p>
           </div>
           <div class="card">
             <h3>The Solution: SCOS</h3>
             <p class="note">
-              <strong>SCOS is Windows-based</strong>, so games and launchers run <strong>natively</strong> — no
-              Proton/Wine layer.
-              You keep Windows’ broad driver support and compatibility, but the experience stays
-              <strong>console-simple</strong>:
-              straight into <strong>Steam Big Picture</strong>, with desktop clutter locked away.
+              <strong>SCOS keeps the Windows foundation</strong> and turns it into a more console-like Steam gaming
+              environment. Games and launchers can run with native Windows compatibility, while SCOS Standard limits
+              normal desktop access and focuses the experience around Steam.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- POWERED BY WINDOWS (NO BLOAT) -->
+    <!-- STEAMOS VS SCOS -->
+    <section id="comparison">
+      <div class="container">
+        <h2>SCOS vs SteamOS</h2>
+        <p class="lead">
+          SCOS and SteamOS take different approaches. SteamOS is a Linux-based Steam-first operating system. SCOS is a
+          Windows-based console environment designed for Steam gaming while keeping Windows compatibility.
+        </p>
+        <div class="card">
+          <table>
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>SteamOS</th>
+                <th>SCOS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Base system</td>
+                <td>Linux-based</td>
+                <td>Windows-based</td>
+              </tr>
+              <tr>
+                <td>Main interface</td>
+                <td>Steam / Steam Deck style interface</td>
+                <td>Steam Big Picture / Steam Gamepad UI</td>
+              </tr>
+              <tr>
+                <td>Game compatibility</td>
+                <td>Strong through Proton, but not perfect</td>
+                <td>Native Windows compatibility</td>
+              </tr>
+              <tr>
+                <td>Anti-cheat support</td>
+                <td>Depends on Linux/Proton support from the game developer</td>
+                <td>Better chance with Windows anti-cheat games because it runs on Windows</td>
+              </tr>
+              <tr>
+                <td>Launchers</td>
+                <td>Best with Steam, other launchers may need extra work</td>
+                <td>Better compatibility with Windows launchers</td>
+              </tr>
+              <tr>
+                <td>Performance and weight</td>
+                <td>Generally lighter</td>
+                <td>Heavier because Windows is underneath</td>
+              </tr>
+              <tr>
+                <td>Windows activation</td>
+                <td>Not needed</td>
+                <td>Separate from SCOS and handled by the user</td>
+              </tr>
+              <tr>
+                <td>Maturity</td>
+                <td>Mature Valve platform</td>
+                <td>Early public beta</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- POWERED BY WINDOWS -->
     <section id="poweredby">
       <div class="container">
-        <h2>Powered by Windows — without the bloat</h2>
+        <h2>Powered by Windows — focused for the living room</h2>
         <ul>
-          <li><strong>Native compatibility</strong> for Steam and popular PC launchers</li>
-          <li><strong>Bloat-free baseline</strong> — only what’s needed to play and stream</li>
-          <li><strong>Telemetry minimized/disabled where safe</strong> for a lean, privacy-respecting setup</li>
+          <li><strong>Native compatibility</strong> for Steam and many Windows PC games</li>
+          <li><strong>Launcher compatibility</strong> for services that expect Windows</li>
+          <li><strong>Driver compatibility</strong> through the Windows ecosystem</li>
+          <li><strong>Console-style restrictions</strong> in SCOS Standard to reduce desktop clutter</li>
         </ul>
-        <div class="callout">You get the breadth of Windows with the simplicity of a console.</div>
+        <div class="callout">
+          SCOS aims to bring the breadth of Windows compatibility closer to the simplicity of a console.
+        </div>
       </div>
     </section>
 
@@ -148,26 +282,26 @@
     <section id="why">
       <div class="container">
         <h2>Why SCOS?</h2>
-        <p class="lead">You want Steam’s performance and compatibility—minus the clutter. SCOS is the middle ground:
-          <strong>Windows where it counts</strong>, <strong>console where it feels</strong>. Not a workstation. Not for
-          productivity. Pure play.
+        <p class="lead">
+          SCOS is for players who want the comfort of Steam Big Picture, the compatibility of Windows, and the simplicity
+          of a console-style setup.
         </p>
         <div class="cards">
           <div class="card">
-            <h3>No Proton/Wine worries</h3>
-            <p class="note">Native Windows compatibility — no translation layer.</p>
+            <h3>Native Windows compatibility</h3>
+            <p class="note">Designed for games, launchers, drivers, and anti-cheat systems that expect Windows.</p>
           </div>
           <div class="card">
-            <h3>No desktop clutter</h3>
-            <p class="note">No desktop or taskbar; controller-first living-room UI.</p>
+            <h3>Steam as the shell</h3>
+            <p class="note">SCOS Standard boots into Steam instead of a normal desktop experience.</p>
           </div>
           <div class="card">
             <h3>Built for the TV</h3>
-            <p class="note">Readable typography, big targets, simple dialogs.</p>
+            <p class="note">A console-style direction focused on living-room gaming.</p>
           </div>
           <div class="card">
-            <h3>Bloat-free</h3>
-            <p class="note">Only what’s needed to play and watch.</p>
+            <h3>Public build pipeline</h3>
+            <p class="note">SCOS Builder creates a SCOS installation ISO from your own Windows ISO.</p>
           </div>
         </div>
       </div>
@@ -176,27 +310,27 @@
     <!-- WHAT IT DOES -->
     <section id="what">
       <div class="container">
-        <h2>What SCOS Does</h2>
+        <h2>What SCOS Standard Does</h2>
         <ul>
-          <li><strong>Replaces explorer.exe</strong> with <strong>Steam Big Picture Mode</strong> after install.</li>
-          <li><strong>Boots straight to Steam</strong> on every startup.</li>
-          <li><strong>Controller-only navigation</strong> post-install (keyboard/mouse only for setup).</li>
-          <li><strong>Unified Remote</strong> can be used for occasional text/input tasks (see Docs for current beta
-            limitations).</li>
+          <li><strong>Uses Steam Big Picture / Steam Gamepad UI</strong> as the main shell after setup.</li>
+          <li><strong>Boots straight into the Steam console environment</strong> on startup.</li>
+          <li><strong>Restricts normal Windows desktop access</strong> in the public Standard edition.</li>
+          <li><strong>Allows approved system panels</strong> such as Sound settings where needed for audio device setup.</li>
+          <li><strong>Uses SCOS Builder</strong> to create a repeatable installation ISO from an official Windows ISO.</li>
         </ul>
         <div class="spacer"></div>
         <div class="callout">
-          It feels like a console; you keep native Windows drivers and performance under the hood.
+          SCOS feels like a console, while keeping Windows compatibility under the hood.
         </div>
       </div>
     </section>
 
-    <!-- GET STARTED (links only, content moved to pages) -->
+    <!-- GET STARTED -->
     <section id="get-started">
       <div class="container">
         <h2>Get Started</h2>
         <div class="cta">
-          <a href="pages/download.html" class="btn btn-primary">Download SCOS</a>
+          <a href="pages/download.html" class="btn btn-primary">Download SCOS Builder</a>
           <a href="pages/docs.html" class="btn btn-ghost">Read the Documentation</a>
           <a href="pages/features.html" class="btn btn-ghost">Explore Features</a>
           <a href="pages/faq.html" class="btn btn-ghost">FAQ</a>
@@ -209,7 +343,7 @@
   <footer>
     <div class="container">
       <div>© <span id="year"></span> SCOS Project. All rights reserved.</div>
-      <div>SCOS is independent and not affiliated with Microsoft or Valve.</div>
+      <div>SCOS is independent and not affiliated with Microsoft, Valve, Steam, or any third-party launcher.</div>
     </div>
   </footer>
 

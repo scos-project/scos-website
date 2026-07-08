@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>FAQ — SCOS</title>
     <meta name="description"
-        content="Frequently asked questions about SCOS: installation, controllers, networking, Unified Remote, SteamOS vs SCOS, troubleshooting, privacy, and roadmap." />
+        content="Frequently asked questions about SCOS Standard Public Beta, SCOS Builder, installation, bootable USB creation, requirements, controllers, networking, SteamOS vs SCOS, troubleshooting, privacy, and roadmap." />
     <link rel="stylesheet" href="../style.css" />
 </head>
 
@@ -14,21 +14,17 @@
     <!-- NAVBAR -->
     <div class="nav">
         <div class="container nav-inner">
-            <div class="brand">
-                <img src="../images/logo.png" class="brand-logo" alt="SCOS logo" width="28" height="28" loading="eager"
-                    fetchpriority="high">
-                <span>SCOS</span>
-            </div>
 
             <nav class="links" aria-label="Primary">
                 <a href="../index.html" class="nav-link">Home</a>
                 <a href="../pages/download.html" class="nav-link">Download</a>
+                <a href="../pages/news.html" class="nav-link">News</a>
                 <a href="../pages/features.html" class="nav-link">Features</a>
                 <a href="../pages/docs.html" class="nav-link">Documentation</a>
                 <a href="../pages/faq.html" class="nav-link">FAQ</a>
                 <a href="../pages/contact.html" class="nav-link">Contact</a>
             </nav>
-            <span class="badge">Standard Edition Beta: available now</span>
+            <span class="badge">SCOS Standard Public Beta: available now</span>
         </div>
     </div>
 
@@ -36,9 +32,15 @@
         <!-- HERO -->
         <section class="hero">
             <div class="container">
-                <div class="badge inline">Frequently Asked Questions</div>
+                <div class="badge inline">SCOS Builder v0.1.2 · Build Package v0.3.6.4</div>
                 <h1 class="title">FAQ</h1>
-                <p class="subtitle">Answers to common questions about installing and using SCOS.</p>
+                <p class="subtitle">
+                    Answers to common questions about SCOS Standard, SCOS Builder, installation, requirements,
+                    compatibility, and current beta limitations.
+                </p>
+                <p class="disclaimer">
+                    SCOS is independent and not affiliated with Microsoft, Valve, Steam, or any third-party launcher.
+                </p>
             </div>
         </section>
 
@@ -48,27 +50,126 @@
                 <h2>General</h2>
                 <div class="cards">
                     <div class="card">
+                        <h3>What is SCOS?</h3>
+                        <p class="note">
+                            SCOS Standard is a <strong>Windows-based Steam console environment</strong>.
+                            It turns a fresh Windows installation into a controller-first living-room experience built
+                            around <strong>Steam Big Picture / Steam Gamepad UI</strong>.
+                        </p>
+                    </div>
+                    <div class="card">
                         <h3>Is SCOS a new operating system?</h3>
                         <p class="note">
-                            Yes. SCOS is installed as a <strong>fresh operating system powered by Windows</strong>, from
-                            an ISO.
-                            It is <em>not</em> a program that tweaks your existing Windows install.
+                            SCOS installs as a separate Windows-based console environment created from a Windows ISO.
+                            It is <em>not</em> a program that tweaks your existing Windows installation.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Does SCOS include Windows?</h3>
+                        <p class="note">
+                            No. SCOS does <strong>not</strong> include, provide, sell, or activate Windows.
+                            You must provide your own official Windows ISO, and Windows activation remains separate from
+                            SCOS.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>What is SCOS Builder?</h3>
+                        <p class="note">
+                            SCOS Builder is the tool used to create a SCOS installation ISO from your own Windows ISO.
+                            It downloads the official SCOS Build Package from GitHub, injects the setup files, and
+                            rebuilds the final bootable SCOS ISO.
                         </p>
                     </div>
                     <div class="card">
                         <h3>What’s the goal of SCOS?</h3>
                         <p class="note">
-                            Deliver a <strong>console-style living-room experience</strong> with <strong>native Windows
-                                compatibility</strong>.
-                            SCOS boots straight into <strong>Steam Big Picture</strong> and hides desktop clutter.
+                            The goal is to deliver a <strong>console-style living-room gaming experience</strong> while
+                            keeping the compatibility advantages of Windows for games, launchers, drivers, and anti-cheat
+                            systems that expect Windows.
                         </p>
                     </div>
                     <div class="card">
                         <h3>Who is SCOS for?</h3>
                         <p class="note">
-                            Players who want a <strong>Windows-based console feel</strong> on a TV, with full
-                            compatibility for Steam
-                            (and other PC launchers documented in the <a href="../pages/docs.html">Docs</a>).
+                            SCOS is for players who want a Windows-powered Steam console experience on a TV,
+                            especially when they want native Windows compatibility instead of relying only on Linux/Proton
+                            compatibility.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOWNLOAD / BUILDER -->
+        <section id="builder">
+            <div class="container">
+                <h2>Download &amp; SCOS Builder</h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3>Where do I download SCOS?</h3>
+                        <p class="note">
+                            Download <strong>SCOS Builder</strong> from the official GitHub release page.
+                            The website Download button opens the GitHub release page so you can read the notes and
+                            download the correct release asset.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Which file do I download on GitHub?</h3>
+                        <p class="note">
+                            On the release page, download the <strong>SCOSBuilder_v0.1.2.zip</strong> asset,
+                            extract it, then run <strong>SCOSBuilder.exe</strong>.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Can I download the final SCOS ISO directly?</h3>
+                        <p class="note">
+                            The current public flow uses SCOS Builder. You provide your own Windows ISO, then SCOS
+                            Builder creates the final SCOS installation ISO locally.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Why use GitHub instead of a direct ZIP link?</h3>
+                        <p class="note">
+                            GitHub release pages show release notes, requirements, assets, and future checksums or
+                            hotfixes. This is safer and clearer for a public beta.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REQUIREMENTS -->
+        <section id="requirements">
+            <div class="container">
+                <h2>Requirements</h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3>What do I need to run SCOS Builder?</h3>
+                        <p class="note">
+                            You need Windows 10 or Windows 11, the matching .NET Desktop Runtime, Windows ADK Deployment
+                            Tools, an official Windows ISO, and an internet connection.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Which Windows ADK option do I need?</h3>
+                        <p class="note">
+                            During Windows ADK installation, only <strong>Deployment Tools</strong> is required.
+                            SCOS Builder uses <strong>oscdimg.exe</strong> from Deployment Tools to rebuild the final ISO.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Do I need Windows 11 TPM / Secure Boot requirements?</h3>
+                        <p class="note">
+                            For Windows 11-based SCOS builds, the target device should meet the official Windows 11
+                            requirements, including TPM 2.0, Secure Boot-capable UEFI firmware, and at least 4 GB of RAM.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Can I bypass Windows 11 requirements with Rufus?</h3>
+                        <p class="note">
+                            Officially, no. For SCOS ISOs, leave all USB creation customization options unchecked.
+                            SCOS already includes its own setup configuration, and extra modifications may conflict with
+                            the SCOS installation flow.
                         </p>
                     </div>
                 </div>
@@ -83,29 +184,62 @@
                     <div class="card">
                         <h3>How do I install SCOS?</h3>
                         <p class="note">
-                            Create a bootable USB from the SCOS ISO, boot from it, and follow the installer.
+                            Use SCOS Builder to create a SCOS ISO from your own Windows ISO. Then create a bootable USB,
+                            boot from it, choose the target disk or partition, and let SCOS setup finish.
                             See the step-by-step guide on the <a href="../pages/download.html">Download</a> page.
                         </p>
                     </div>
                     <div class="card">
                         <h3>Will installation erase my data?</h3>
                         <p class="note">
-                            It can. Selecting a target disk/partition may <strong>erase/format</strong> that drive.
+                            It can. Selecting a target disk or partition may <strong>erase or format</strong> that drive.
                             <strong>Back up your data</strong> before you begin.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Does SCOS modify my current Windows install?</h3>
+                        <p class="note">
+                            SCOS is intended to be installed as a fresh separate environment. It does not modify your
+                            existing Windows installation unless you choose to install it over the same disk or partition.
                         </p>
                     </div>
                     <div class="card">
                         <h3>Do I need Ethernet?</h3>
                         <p class="note">
-                            Yes. An <strong>Ethernet connection is required</strong> to complete installation.
-                            Plug the cable in <strong>before</strong> you start.
+                            Ethernet is required for the current beta setup so SCOS can download required
+                            components and complete setup more reliably.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BOOTABLE USB -->
+        <section id="usb">
+            <div class="container">
+                <h2>Bootable USB</h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3>Which tool should I use to create the USB?</h3>
+                        <p class="note">
+                            You can use a tool such as Rufus or BalenaEtcher to write the generated SCOS ISO to a USB
+                            drive.
                         </p>
                     </div>
                     <div class="card">
-                        <h3>Why do I see screen flicker after install?</h3>
+                        <h3>Should I enable Rufus customization options?</h3>
                         <p class="note">
-                            Windows Update is installing your <strong>GPU drivers</strong>. This is normal.
-                            When it finishes, <strong>reboot once</strong> so Steam detects the driver correctly.
+                            No. Leave all Windows installation customization options unchecked. This includes bypassing
+                            TPM, Secure Boot, RAM requirements, online account changes, local account creation, privacy
+                            options, regional options, and BitLocker-related changes.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Why leave customization options unchecked?</h3>
+                        <p class="note">
+                            SCOS already includes its own unattended setup configuration. Extra USB tool customizations
+                            may overwrite or conflict with SCOS setup files and cause the installation to fail or behave
+                            incorrectly.
                         </p>
                     </div>
                 </div>
@@ -118,24 +252,24 @@
                 <h2>Controllers</h2>
                 <div class="cards">
                     <div class="card">
-                        <h3>When should I plug in controllers?</h3>
-                        <p class="note">
-                            <strong>After</strong> GPU drivers finish installing and you reboot.
-                            Plugging in too early can make Windows select the controller as an audio device.
-                        </p>
-                    </div>
-                    <div class="card">
                         <h3>USB vs Bluetooth?</h3>
                         <p class="note">
-                            <strong>USB-only at launch</strong> (wired controllers). Bluetooth pairing is planned for a
-                            future version.
+                            USB controllers are recommended for the current beta. Bluetooth controller support is planned
+                            for a future version.
                         </p>
                     </div>
                     <div class="card">
                         <h3>Which controllers work?</h3>
                         <p class="note">
-                            Xbox/PlayStation and other <strong>XInput-compatible</strong> gamepads (over USB).
-                            Use a <strong>USB hub</strong> for multiple controllers.
+                            Xbox, PlayStation, and other XInput-compatible controllers should work over USB.
+                            A USB hub is recommended for multiple controllers.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Do I need keyboard and mouse?</h3>
+                        <p class="note">
+                            Keyboard and mouse are useful for installation and troubleshooting. Daily use is intended to
+                            be controller-first once SCOS boots into Steam.
                         </p>
                     </div>
                 </div>
@@ -148,20 +282,17 @@
                 <h2>Audio picks the controller — how do I fix it?</h2>
                 <ol>
                     <li>In Steam Big Picture: <strong>Menu → Settings → In-Game Voice</strong>.</li>
-                    <li>Under <strong>Microphone</strong>, choose <strong>“Select Device”</strong> to open the Windows
-                        sound popup.</li>
-                    <li><strong>Controller cursor:</strong> Hold the <strong>PS/Xbox button</strong> and move the
-                        <strong>right stick</strong> to move the cursor.
-                        <strong>RB</strong> = left click, <strong>LB</strong> = right click. (Xbox mapping expected
-                        similar.)
-                    </li>
-                    <li>In the <strong>Playback</strong> tab, set your TV/AVR/speakers device (e.g., <em>High Definition
-                            Audio Controller</em> or <em>Realtek Audio</em>) as <strong>Default</strong>.</li>
-                    <li>In the <strong>Recording</strong> tab, set your preferred <strong>Microphone</strong> as Default
-                        (if needed).</li>
+                    <li>Under <strong>Microphone</strong>, choose <strong>Select Device</strong> to open the Windows
+                        sound panel.</li>
+                    <li>In the <strong>Playback</strong> tab, set your TV, AVR, speakers, or headset as
+                        <strong>Default</strong>.</li>
+                    <li>In the <strong>Recording</strong> tab, set your preferred microphone as Default if needed.</li>
+                    <li>Apply the change and return to Steam.</li>
                 </ol>
-                <div class="callout">While moving/clicking the cursor, keep holding the <strong>PS/Xbox button</strong>
-                    the whole time.</div>
+                <div class="callout">
+                    Sound settings are one of the approved Windows panels that may remain available in SCOS Standard
+                    because audio device selection is important for a living-room console.
+                </div>
             </div>
         </section>
 
@@ -173,17 +304,15 @@
                     <div class="card">
                         <h3>Can I use Wi-Fi?</h3>
                         <p class="note">
-                            Installation requires <strong>Ethernet</strong>. For living-room setups without Ethernet
-                            drop,
-                            many users bridge via a Wi-Fi repeater with an Ethernet port.
+                            Direct Wi-Fi configuration inside SCOS Standard is not yet part of the beta experience.
+                            Ethernet is strongly recommended.
                         </p>
                     </div>
                     <div class="card">
-                        <h3>Do I need Unified Remote?</h3>
+                        <h3>What if my living-room setup has no Ethernet cable?</h3>
                         <p class="note">
-                            If a game/launcher requires credentials outside Steam, the <strong>Unified Remote</strong>
-                            mobile app
-                            is typically used to input text (see known beta limitation below).
+                            A Wi-Fi repeater or bridge with an Ethernet port can be configured in advance, then connected
+                            to the SCOS console through Ethernet.
                         </p>
                     </div>
                 </div>
@@ -196,19 +325,24 @@
                 <h2>Unified Remote &amp; Launchers</h2>
                 <div class="cards">
                     <div class="card">
-                        <h3>Known issue in Public Beta</h3>
+                        <h3>What is Unified Remote for?</h3>
                         <p class="note">
-                            The Unified Remote installer may be detected but <strong>not actually installed</strong>
-                            during setup.
-                            Manual installation isn’t possible later because SCOS doesn’t expose the desktop.
+                            Unified Remote Server can help with occasional phone-based input for text fields or external
+                            launcher sign-ins when available.
                         </p>
                     </div>
                     <div class="card">
-                        <h3>What’s the impact?</h3>
+                        <h3>Can I manually install apps later?</h3>
                         <p class="note">
-                            You can play Steam games that don’t require outside-of-Steam sign-ins.
-                            Avoid titles that force launcher logins (e.g., Rockstar/EA) until the fix ships,
-                            or pre-sign-in on a standard Windows install beforehand.
+                            SCOS Standard restricts normal Windows desktop access after installation, so manual app
+                            installation is not part of the public Standard experience.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Do external launchers work?</h3>
+                        <p class="note">
+                            SCOS is Windows-based, so it has better compatibility with Windows launchers than Linux-only
+                            environments. However, launcher behavior and sign-in flows may still vary during the beta.
                         </p>
                     </div>
                 </div>
@@ -221,15 +355,19 @@
                 <h2>SteamOS vs SCOS</h2>
                 <div class="card">
                     <p class="note">
-                        SteamOS (Linux) often relies on <strong>Proton/Wine</strong> to run Windows games. It’s
-                        fantastic for many titles,
-                        but can struggle with external launchers and strict anti-cheat. <strong>SCOS is
-                            Windows-based</strong>,
-                        so games and launchers run <strong>natively</strong> without a translation layer, while keeping
-                        a console-simple flow.
+                        SteamOS is a Linux-based Steam-first operating system. It works very well for many games, but
+                        some Windows games, launchers, anti-cheat systems, or tools may still depend on Linux/Proton
+                        support from the game developer.
                     </p>
-                    <p class="note">See <a href="../pages/docs.html#compare">Documentation → SteamOS vs SCOS</a> for a
-                        detailed comparison.</p>
+                    <p class="note">
+                        SCOS takes a different approach. It keeps the Windows foundation, then turns it into a
+                        console-style Steam environment. This gives SCOS a better chance with games, launchers, drivers,
+                        and anti-cheat systems that expect Windows.
+                    </p>
+                    <p class="note">
+                        See <a href="../pages/docs.html#compare">Documentation → SteamOS vs SCOS</a> for a detailed
+                        comparison.
+                    </p>
                 </div>
             </div>
         </section>
@@ -242,21 +380,28 @@
                     <div class="card">
                         <h3>Black screen after exiting Steam</h3>
                         <p class="note">
-                            Exiting Steam Desktop Mode can leave a black screen. <strong>Restart</strong> and you’ll
-                            boot back into Big Picture.
+                            SCOS Standard uses Steam as the final shell. Exiting Steam entirely may leave a blank or
+                            limited shell state. Restart the console to return to the intended Steam experience.
                         </p>
                     </div>
                     <div class="card">
-                        <h3>GPU not recognized by Steam</h3>
+                        <h3>GPU driver is outdated</h3>
                         <p class="note">
-                            Wait for Windows Update to install drivers (the screen may flicker). Then do a
-                            <strong>single reboot</strong>.
+                            GPU driver update support is planned for a future SCOS release. The goal is to provide a
+                            controlled SCOS Driver Setup or Driver Manager path without exposing the full Windows desktop.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>The clock or time zone is wrong</h3>
+                        <p class="note">
+                            Time zone and internet clock sync improvements are planned. A future Builder version may let
+                            users select the time zone before creating the SCOS ISO.
                         </p>
                     </div>
                     <div class="card">
                         <h3>No audio on TV/AVR</h3>
                         <p class="note">
-                            If the controller was selected as the default audio device, fix it with the steps in
+                            If the wrong audio device is selected, use the approved Sound settings path described in
                             <a href="#audio">Audio picks the controller</a>.
                         </p>
                     </div>
@@ -270,9 +415,9 @@
                 <h2>Privacy</h2>
                 <div class="card">
                     <p class="note">
-                        SCOS avoids telemetry where it’s safe to do so and ships bloat-free.
-                        The website’s contact form is embedded from a third-party provider; data is handled by that
-                        provider.
+                        SCOS aims to keep the environment focused and free of custom analytics by default.
+                        The website contact form may use an external provider; data entered into that form is handled by
+                        that provider.
                         See <a href="../pages/docs.html#privacy">Docs → Privacy &amp; Data</a> for details.
                     </p>
                 </div>
@@ -282,17 +427,19 @@
         <!-- ROADMAP -->
         <section id="roadmap">
             <div class="container">
-                <h2>Roadmap (High-Level)</h2>
+                <h2>Roadmap</h2>
                 <ul>
-                    <li>Fix Unified Remote auto-install</li>
-                    <li>More pre-installed launchers</li>
-                    <li>Bluetooth controller support</li>
-                    <li>Wi-Fi improvements</li>
-                    <li>Controller navigation refinements</li>
-                    <li>Windows 11-based build (future)</li>
+                    <li><strong>SCOS Builder v0.1.3:</strong> Time zone selection and SCOS configuration options</li>
+                    <li><strong>SCOS v0.3.6.5:</strong> Time zone and internet clock sync</li>
+                    <li><strong>SCOS v0.3.7:</strong> Driver setup phase foundation</li>
+                    <li><strong>SCOS v0.3.8:</strong> GPU driver update support</li>
+                    <li><strong>Future:</strong> Optional SCOS Recovery Environment integration through Builder</li>
+                    <li><strong>Future:</strong> Bluetooth and Wi-Fi improvements</li>
+                    <li><strong>Future:</strong> Expanded Builder-based customization</li>
+                    <li><strong>Future:</strong> Windows 11-based SCOS improvements</li>
                 </ul>
                 <div class="cta">
-                    <a href="../pages/download.html" class="btn btn-primary">Install SCOS</a>
+                    <a href="../pages/download.html" class="btn btn-primary">Download SCOS Builder</a>
                     <a href="../pages/docs.html" class="btn btn-ghost">Read the Docs</a>
                 </div>
             </div>
@@ -302,7 +449,7 @@
     <footer>
         <div class="container">
             <div>© <span id="year"></span> SCOS Project. All rights reserved.</div>
-            <div>SCOS is independent and not affiliated with Microsoft or Valve.</div>
+            <div>SCOS is independent and not affiliated with Microsoft, Valve, Steam, or any third-party launcher.</div>
         </div>
     </footer>
 

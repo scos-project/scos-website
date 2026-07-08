@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Download — SCOS</title>
   <meta name="description"
-    content="Download SCOS. Standard Edition Beta coming soon. Console-style Windows shell for Steam, boots into Steam Big Picture Mode." />
+    content="Download SCOS Builder. Create a SCOS Standard installation ISO from your own Windows ISO. Windows-based Steam console experience for living-room gaming." />
   <link rel="stylesheet" href="../style.css" />
   <style>
     /* Download dropdown */
@@ -30,7 +30,7 @@
       position: absolute;
       right: 0;
       top: calc(100% + 8px);
-      min-width: 240px;
+      min-width: 280px;
       padding: 6px;
       background: var(--bg-soft);
       border: 1px solid var(--border);
@@ -82,7 +82,7 @@
 
     .modal {
       width: 100%;
-      max-width: 520px;
+      max-width: 560px;
       background: var(--bg-soft);
       border: 1px solid var(--border);
       border-radius: var(--radius);
@@ -99,6 +99,25 @@
       margin: 0 0 14px;
       color: var(--muted);
     }
+
+    .version-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .version-item {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px;
+      background: rgba(255, 255, 255, .025);
+    }
+
+    .version-item strong {
+      display: block;
+      margin-bottom: 4px;
+    }
   </style>
 </head>
 
@@ -106,21 +125,17 @@
   <!-- NAVBAR -->
   <div class="nav">
     <div class="container nav-inner">
-      <div class="brand">
-        <img src="../images/logo.png" class="brand-logo" alt="SCOS logo" width="28" height="28" loading="eager"
-          fetchpriority="high">
-        <span>SCOS</span>
-      </div>
 
       <nav class="links" aria-label="Primary">
         <a href="../index.html" class="nav-link">Home</a>
         <a href="../pages/download.html" class="nav-link">Download</a>
+        <a href="../pages/news.html" class="nav-link">News</a>
         <a href="../pages/features.html" class="nav-link">Features</a>
         <a href="../pages/docs.html" class="nav-link">Documentation</a>
         <a href="../pages/faq.html" class="nav-link">FAQ</a>
         <a href="../pages/contact.html" class="nav-link">Contact</a>
       </nav>
-      <span class="badge">Standard Edition Beta: available now</span>
+      <span class="badge">SCOS Standard Public Beta: available now</span>
     </div>
   </div>
 
@@ -128,12 +143,15 @@
     <!-- HERO -->
     <section class="hero">
       <div class="container">
-        <div class="badge inline">Powered by Windows · Built for Steam</div>
-        <h1 class="title">Download SCOS</h1>
+        <div class="badge inline">SCOS Builder v0.1.2 · Build Package v0.3.6.4</div>
+        <h1 class="title">Download SCOS Builder</h1>
         <p class="subtitle">
-          Standard Edition Beta is now available. SCOS replaces the Windows shell with
-          <strong>Steam Big Picture Mode</strong>, so you boot straight into Steam on every startup.
-          <strong>Gaming-only, controller-first.</strong>
+          SCOS Standard Public Beta is now available through <strong>SCOS Builder</strong>.
+          SCOS Builder creates a bootable SCOS installation ISO from your own official Windows ISO.
+        </p>
+        <p class="subtitle">
+          SCOS does <strong>not</strong> include Windows. You must provide your own Windows ISO, and Windows activation
+          remains separate from SCOS.
         </p>
 
         <div class="cta">
@@ -142,19 +160,75 @@
               Download <span class="caret">▾</span>
             </a>
             <div class="menu" role="menu" aria-label="Download options">
-              <a href="#" class="open-download-warning"
-                data-download-url="https://mega.nz/file/V7QRDaLL#x7vXTEkuEvUt6qHbCRMKu9_R1CG5N48B-csv9EO2TeA"
-                role="menuitem">Standard Edition Beta (.iso)</a>
-              <a href="#" role="menuitem" class="disabled" aria-disabled="true" title="Coming soon">
-                Public Release (Soon)
+              <a href="https://github.com/scos-project/scos-builder/releases/tag/v0.1.2" target="_blank" rel="noopener"
+                role="menuitem">SCOS Builder v0.1.2</a>
+              <a href="https://github.com/scos-project/scos-build" target="_blank" rel="noopener" role="menuitem">
+                SCOS Build Package</a>
+              <a href="#" role="menuitem" class="disabled" aria-disabled="true" title="Coming later">
+                Recovery Environment (Later)
               </a>
             </div>
           </div>
 
-          <a class="btn btn-ghost" aria-disabled="true">Release Notes (Soon)</a>
+          <a href="https://github.com/scos-project/scos-builder/releases/tag/v0.1.2" target="_blank" rel="noopener"
+            class="btn btn-ghost">Release Notes</a>
         </div>
 
-        <p class="disclaimer">SCOS is independent and not affiliated with Microsoft or Valve.</p>
+        <p class="disclaimer">SCOS is independent and not affiliated with Microsoft, Valve, Steam, or any third-party launcher.</p>
+      </div>
+    </section>
+
+    <!-- CURRENT RELEASE -->
+    <section id="current-release">
+      <div class="container">
+        <h2>Current Public Release</h2>
+        <div class="card">
+          <div class="version-grid">
+            <div class="version-item">
+              <strong>SCOS Builder</strong>
+              <span>v0.1.2</span>
+            </div>
+            <div class="version-item">
+              <strong>SCOS Build Package</strong>
+              <span>v0.3.6.4</span>
+            </div>
+            <div class="version-item">
+              <strong>Edition</strong>
+              <span>Standard</span>
+            </div>
+            <div class="version-item">
+              <strong>Channel</strong>
+              <span>stable</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD FROM GITHUB -->
+    <section id="download-from-github">
+      <div class="container">
+        <h2>Download from GitHub</h2>
+        <div class="card">
+          <p>
+            The <strong>Download</strong> button opens the official SCOS Builder GitHub release page.
+          </p>
+          <p class="note">
+            On the release page, download the <strong>SCOSBuilder_v0.x.x.zip</strong> asset, extract it, then run
+            <strong>SCOSBuilder.exe</strong>.
+          </p>
+          <p class="note">
+            Keep all files from the extracted release folder together. SCOS Builder may include an
+            <code>.exe</code>, <code>.dll</code>, <code>.deps.json</code>, <code>.runtimeconfig.json</code>, and other
+            required DLL files.
+          </p>
+          <div class="cta">
+            <a href="https://github.com/scos-project/scos-builder/releases/tag/v0.1.2" target="_blank" rel="noopener"
+              class="btn btn-primary">Open SCOS Builder Release</a>
+            <a href="https://github.com/scos-project/scos-builder" target="_blank" rel="noopener"
+              class="btn btn-ghost">View Builder Repository</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -162,38 +236,86 @@
     <section id="get-ready">
       <div class="container">
         <h2>Before You Start</h2>
-        <p class="lead">Have these ready for a smooth install:</p>
+        <p class="lead">Have these ready before building and installing SCOS:</p>
         <ul>
-          <li><strong>PC:</strong> Windows-capable gaming PC connected to your TV</li>
-          <li><strong>Memory:</strong> 16&nbsp;GB RAM</li>
-          <li><strong>Storage:</strong> 1&nbsp;TB SSD (OS + games)</li>
-          <li><strong>Controllers:</strong> USB gamepads; <strong>USB hub required</strong> for multiple controllers
-          </li>
-          <li><strong>Network:</strong> <strong>Ethernet connection is required to complete installation</strong> —
-            <u>plug the cable in <em>before</em> you begin</u>
-          </li>
-          <li><strong>Peripherals:</strong> Keyboard &amp; mouse only for installation</li>
-          <li><strong>Apps:</strong> Unified Remote (mobile) if you need to type credentials outside Steam</li>
-          <li><strong>Important:</strong> <u>Do not plug in any controllers</u> during installation and initial graphics
-            driver setup. Plug them in <em>after</em> the screen flicker finishes and you reboot.</li>
+          <li><strong>Builder device:</strong> Windows 10 or Windows 11 computer to run SCOS Builder</li>
+          <li><strong>.NET:</strong> .NET Desktop Runtime matching the Builder release</li>
+          <li><strong>Windows ADK:</strong> Windows ADK Deployment Tools for <code>oscdimg.exe</code></li>
+          <li><strong>Windows ISO:</strong> An official Windows ISO provided by the user</li>
+          <li><strong>Internet:</strong> Required so SCOS Builder can download the SCOS Build Package from GitHub</li>
+          <li><strong>Target device:</strong> A Windows-compatible gaming system for the final SCOS installation</li>
+          <li><strong>Network during install:</strong> Ethernet is required for the current beta setup</li>
+          <li><strong>Peripherals:</strong> Keyboard and mouse for installation; controller for daily Steam use</li>
         </ul>
       </div>
     </section>
 
-    <!-- KNOWN ISSUE -->
-    <section id="known-issue">
+    <!-- WINDOWS ADK -->
+    <section id="adk">
       <div class="container">
-        <h2>Known Issue (Standard Edition Beta)</h2>
+        <h2>Windows ADK Requirement</h2>
         <div class="card">
-          <p><strong>Unified Remote silent-install bug:</strong> during installation it may be detected but <strong>not
-              actually installed</strong>.</p>
-          <ul>
-            <li>SCOS does not expose the Windows desktop after installation, so you <strong>cannot manually install apps
-                later</strong>.</li>
-            <li><strong>Impact:</strong> You can play Steam games that don’t require entering credentials outside Steam.
-              Avoid titles that force external launcher sign-ins (e.g., Rockstar Games Launcher, some EA titles) until
-              the fix ships.</li>
-          </ul>
+          <p>
+            SCOS Builder uses <strong>oscdimg.exe</strong> to rebuild the final bootable ISO.
+            This tool is included with <strong>Windows ADK Deployment Tools</strong>.
+          </p>
+          <p class="note">
+            During Windows ADK installation, only this component is required:
+          </p>
+          <pre><code>[x] Deployment Tools</code></pre>
+          <p class="note">
+            The other ADK components are not required for SCOS Builder v0.1.2.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUILD STEPS -->
+    <section id="build">
+      <div class="container">
+        <h2>Build a SCOS ISO</h2>
+        <p class="lead">
+          SCOS Builder creates the final SCOS installation ISO from your own Windows ISO.
+        </p>
+
+        <ol>
+          <li><strong>Download</strong> SCOS Builder from the GitHub release page.</li>
+          <li><strong>Extract</strong> the SCOS Builder release package.</li>
+          <li><strong>Open</strong> <code>SCOSBuilder.exe</code>.</li>
+          <li><strong>Select your Windows ISO.</strong></li>
+          <li><strong>Select an output folder.</strong></li>
+          <li>Click <strong>Build SCOS ISO</strong>.</li>
+          <li>Wait for SCOS Builder to download the official SCOS Build Package and create the final ISO.</li>
+        </ol>
+
+        <div class="callout">
+          The final ISO will be created as <strong>SCOS_Standard_yyyyMMdd_HHmmss.iso</strong> in the selected output
+          folder.
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOTABLE USB WARNING -->
+    <section id="usb-warning">
+      <div class="container">
+        <h2>Create a Bootable USB</h2>
+        <div class="card">
+          <p>
+            When creating a bootable USB from a SCOS ISO, do <strong>not</strong> enable Windows installation
+            customization options.
+          </p>
+          <p class="note">
+            If your USB creation tool shows options such as bypassing TPM, Secure Boot, RAM requirements, creating a
+            local account, disabling data collection, changing regional settings, or modifying Windows setup behavior,
+            leave all of those options unchecked.
+          </p>
+          <p class="note">
+            SCOS already includes its own unattended setup configuration. Extra customization options may conflict with
+            SCOS setup files and cause the installation to fail or behave incorrectly.
+          </p>
+          <div class="callout">
+            For SCOS ISOs, write the ISO as-is.
+          </div>
         </div>
       </div>
     </section>
@@ -201,36 +323,29 @@
     <!-- INSTALL STEPS -->
     <section id="install">
       <div class="container">
-        <h2>Install SCOS (Fresh OS Install)</h2>
+        <h2>Install SCOS Standard</h2>
         <p class="lead">
-          SCOS installs as a <strong>new operating system powered by Windows</strong> (from an ISO). It does
-          <em>not</em> modify your existing Windows.
+          SCOS installs as a separate Windows-based console environment. It does not modify your existing Windows
+          installation unless you choose to install it over the same disk or partition.
         </p>
 
         <div class="card" style="margin-bottom:16px">
-          <p><strong>⚠️ Important:</strong> Installing SCOS to a disk/partition can <strong>erase data</strong>. Back up
-            everything important before you begin.</p>
+          <p><strong>⚠️ Important:</strong> Installing SCOS to a disk or partition can <strong>erase data</strong>. Back
+            up everything important before you begin.</p>
         </div>
 
         <ol>
           <li><strong>Back up</strong> your data.</li>
-          <li><strong>Download the SCOS ISO</strong> (Standard Edition Beta).</li>
-          <li><strong>Create a bootable USB</strong> (≥ 16&nbsp;GB) using
-            <a href="https://rufus.ie/" target="_blank" rel="noopener">Rufus</a> or
-            <a href="https://etcher.balena.io/" target="_blank" rel="noopener">BalenaEtcher</a> and select the SCOS ISO.
-          </li>
-          <li><strong>Plug in Ethernet</strong> to the PC <em>before</em> you start (required to complete setup).</li>
-          <li><strong>Leave controllers unplugged</strong> for now.</li>
-          <li><strong>Boot from the USB drive</strong> (use your BIOS/UEFI boot menu key, e.g., F12/Del/Esc).</li>
-          <li>Select the <strong>target drive/partition</strong> for SCOS and start installation
-            <em>(⚠️ this may erase/format that drive)</em>.
-          </li>
-          <li><strong>Hands-off install:</strong> SCOS automatically installs Windows, required components/drivers, and
-            Steam.</li>
+          <li><strong>Create a bootable USB</strong> from the SCOS ISO.</li>
+          <li><strong>Leave all USB creation customization options unchecked.</strong></li>
+          <li><strong>Plug in Ethernet</strong> before starting setup if possible.</li>
+          <li><strong>Boot from the USB drive</strong> using your BIOS/UEFI boot menu.</li>
+          <li>Select the <strong>target drive or partition</strong> for SCOS.</li>
+          <li>Start installation and let SCOS setup finish.</li>
         </ol>
 
         <div class="callout">
-          When installation finishes, the system will reboot into Steam’s first-run (OOBE) experience.
+          When installation finishes, SCOS Standard boots into the Steam console environment.
         </div>
       </div>
     </section>
@@ -240,68 +355,25 @@
       <div class="container">
         <h2>After Installation</h2>
 
-        <h3 class="h3">GPU Driver Setup (first minutes)</h3>
-        <ul>
-          <li><strong>Windows Update</strong> will automatically fetch and install your <strong>GPU drivers</strong>.
-          </li>
-          <li>The screen may <strong>flicker</strong> during this process — this is normal.</li>
-          <li>When it completes, <strong>reboot once</strong> so Steam can detect the GPU properly.</li>
-          <li><strong>Only after the flicker/reboot</strong>, plug in your <strong>USB controller(s)</strong>.</li>
-        </ul>
-
-        <div class="card" style="margin-top:12px">
-          <h3 class="h3">Why wait to plug in controllers?</h3>
-          <p class="note">
-            If a controller is connected too early, Windows/SCOS may detect it as an <strong>audio device</strong> and
-            select it by default. Waiting until graphics install finishes prevents your sound from being routed to the
-            controller.
-          </p>
-        </div>
-
-        <h3 class="h3" style="margin-top:20px">If sound still goes to the controller</h3>
-        <ol>
-          <li>Open <strong>Steam Big Picture</strong> menu → <strong>Settings → In-Game Voice</strong>.</li>
-          <li>Under <strong>Microphone</strong>, select <strong>“Select Device”</strong> to open the Windows sound
-            popup.</li>
-          <li><strong>Controller-mouse emulation:</strong>
-            <ul>
-              <li><strong>Hold the PS (or Xbox) button</strong> and move the <strong>right stick</strong> to move the
-                cursor.</li>
-              <li><strong>RB</strong> = left click, <strong>LB</strong> = right click.</li>
-              <li>(Xbox mapping not fully tested, but expected to behave similarly.)</li>
-            </ul>
-          </li>
-          <li>In the <strong>Playback</strong> tab, choose your TV/AVR/speakers device (often <em>High Definition Audio
-              Controller</em> or <em>Realtek Audio</em>) and set it as <strong>Default</strong>.</li>
-          <li>Optionally switch to the <strong>Recording</strong> tab and set your preferred <strong>Microphone</strong>
-            as Default.</li>
-          <li>Apply/OK and return to Steam.</li>
-          <li><strong>Important:</strong> while moving/clicking with the cursor, keep <strong>holding the PS/Xbox
-              button</strong> the whole time.</li>
-        </ol>
-
-        <h3 class="h3" style="margin-top:20px">First-Run in Steam (OOBE)</h3>
-        <ol>
-          <li><strong>Select Language</strong></li>
-          <li><strong>Select Timezone</strong></li>
-          <li><strong>Sign in to Steam</strong> (credentials or Steam Guard)</li>
-        </ol>
-
-        <div class="spacer"></div>
         <div class="card">
           <h3 class="h3">Daily Use</h3>
           <ul>
-            <li>System boots straight to <strong>Steam Big Picture</strong>.</li>
-            <li><strong>USB controllers</strong> at launch; Bluetooth is planned for a future version.</li>
-            <li>Controller-first navigation; keyboard/mouse are not required for daily use.</li>
+            <li>SCOS Standard boots directly into <strong>Steam Big Picture / Steam Gamepad UI</strong>.</li>
+            <li>Normal Windows desktop access is restricted in Standard.</li>
+            <li>Sound settings may remain available when needed for audio device configuration.</li>
+            <li>Keyboard and mouse are mainly useful for setup and troubleshooting; daily use is controller-first.</li>
           </ul>
         </div>
 
         <div class="spacer"></div>
+
         <div class="card">
-          <h3 class="h3">Games Compatibility Note (Beta)</h3>
-          <p class="note">Until the Unified Remote issue is fixed, avoid titles that require external launcher sign-ins
-            (e.g., Rockstar / some EA) unless you completed those sign-ins on a standard Windows desktop beforehand.</p>
+          <h3 class="h3">Current beta notes</h3>
+          <ul>
+            <li>Time zone and internet clock sync improvements are planned for a future update.</li>
+            <li>GPU driver update support is planned for a future update.</li>
+            <li>SCOS Recovery Environment support is planned later and is not currently included in the Git repository.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -316,15 +388,16 @@
               Download <span class="caret">▾</span>
             </a>
             <div class="menu" role="menu" aria-label="Download options">
-              <a href="#" class="open-download-warning" data-download-url="https://mega.nz/YOUR-FINAL-LINK-HERE"
-                role="menuitem">Standard Edition Beta (.iso)</a>
-              <a href="#" role="menuitem" class="disabled" aria-disabled="true">Checksums (Soon)</a>
-              <a href="#" role="menuitem" class="disabled" aria-disabled="true" title="Coming soon">Public Release
-                (Soon)</a>
+              <a href="https://github.com/scos-project/scos-builder/releases/tag/v0.1.2" target="_blank" rel="noopener"
+                role="menuitem">SCOS Builder v0.1.2</a>
+              <a href="https://github.com/scos-project/scos-build" target="_blank" rel="noopener" role="menuitem">
+                SCOS Build Package</a>
+              <a href="#" role="menuitem" class="disabled" aria-disabled="true">Checksums (Later)</a>
             </div>
           </div>
 
-          <a class="btn btn-ghost" aria-disabled="true">View on GitHub (Soon)</a>
+          <a href="https://github.com/scos-project" target="_blank" rel="noopener" class="btn btn-ghost">View on
+            GitHub</a>
         </div>
       </div>
     </section>
@@ -333,30 +406,9 @@
   <footer>
     <div class="container">
       <div>© <span id="year"></span> SCOS Project. All rights reserved.</div>
-      <div>SCOS is independent and not affiliated with Microsoft or Valve.</div>
+      <div>SCOS is independent and not affiliated with Microsoft, Valve, Steam, or any third-party launcher.</div>
     </div>
   </footer>
-
-  <!-- DOWNLOAD WARNING MODAL -->
-  <div class="modal-backdrop" id="downloadWarning" aria-hidden="true">
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="downloadWarningTitle">
-      <h3 id="downloadWarningTitle">Temporary Download Host</h3>
-      <p>
-        The <strong>Standard Edition Beta</strong> is currently hosted on <strong>MEGA</strong> temporarily for now.
-      </p>
-      <p>
-        An official SCOS download domain/page may be used later when possible.
-      </p>
-      <div class="cta">
-        <a href="#" class="btn btn-primary" id="confirmDownload" target="_blank" rel="noopener">
-          Continue to MEGA
-        </a>
-        <button type="button" class="btn btn-ghost" id="cancelDownload">
-          Cancel
-        </button>
-      </div>
-    </div>
-  </div>
 
   <script src="../script.js"></script>
   <script>
@@ -388,43 +440,6 @@
 
     initDropdown('dlHero', 'dlBtnHero');
     initDropdown('dlMain', 'dlBtnMain');
-
-    // Download warning modal
-    const warningModal = document.getElementById('downloadWarning');
-    const confirmDownload = document.getElementById('confirmDownload');
-    const cancelDownload = document.getElementById('cancelDownload');
-
-    document.querySelectorAll('.open-download-warning').forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const url = link.getAttribute('data-download-url');
-        confirmDownload.setAttribute('href', url);
-        warningModal.classList.add('show');
-        warningModal.setAttribute('aria-hidden', 'false');
-      });
-    });
-
-    cancelDownload.addEventListener('click', () => {
-      warningModal.classList.remove('show');
-      warningModal.setAttribute('aria-hidden', 'true');
-      confirmDownload.setAttribute('href', '#');
-    });
-
-    warningModal.addEventListener('click', (e) => {
-      if (e.target === warningModal) {
-        warningModal.classList.remove('show');
-        warningModal.setAttribute('aria-hidden', 'true');
-        confirmDownload.setAttribute('href', '#');
-      }
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        warningModal.classList.remove('show');
-        warningModal.setAttribute('aria-hidden', 'true');
-        confirmDownload.setAttribute('href', '#');
-      }
-    });
   </script>
 </body>
 

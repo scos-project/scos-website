@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>News — SCOS</title>
+  <meta name="description"
+    content="Latest SCOS news, release announcements, development updates, and public beta progress." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div class="nav">
+    <div class="container nav-inner">
+      <nav class="links" aria-label="Primary">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../pages/download.html" class="nav-link">Download</a>
+        <a href="../pages/news.html" class="nav-link">News</a>
+        <a href="../pages/features.html" class="nav-link">Features</a>
+        <a href="../pages/docs.html" class="nav-link">Documentation</a>
+        <a href="../pages/faq.html" class="nav-link">FAQ</a>
+        <a href="../pages/contact.html" class="nav-link">Contact</a>
+      </nav>
+      <span class="badge">SCOS Standard Public Beta: available now</span>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="badge inline">Project Updates</div>
+        <h1 class="title">SCOS News</h1>
+        <p class="subtitle">
+          Official updates about SCOS Standard, SCOS Builder, public beta releases, development progress, and upcoming features.
+        </p>
+        <p class="disclaimer">
+          SCOS is independent and not affiliated with Microsoft, Valve, Steam, or any third-party launcher.
+        </p>
+      </div>
+    </section>
+
+    <!-- FEATURED -->
+    <section id="featured">
+      <div class="container">
+        <h2>Featured</h2>
+        <div class="card">
+          <div class="badge inline">Public Beta</div>
+          <h3>SCOS Standard Public Beta is now available</h3>
+          <p class="note">
+            SCOS has reached its first public milestone. With SCOS Builder v0.1.2, users can now create a SCOS Standard
+            installation ISO from their own official Windows ISO.
+          </p>
+          <p class="note">
+            This release introduces the first public build pipeline for SCOS Standard, using the official SCOS Build
+            Package v0.3.6.4.
+          </p>
+          <div class="cta">
+            <a href="../news/scos-standard-public-beta.html" class="btn btn-primary">Read Article</a>
+            <a href="../pages/download.html" class="btn btn-ghost">Download SCOS Builder</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWS LIST -->
+    <section id="news-list">
+      <div class="container">
+        <h2>Latest News</h2>
+
+        <div class="cards">
+          <article class="card">
+            <div class="badge inline">Release</div>
+            <h3>SCOS Builder v0.1.2 released</h3>
+            <p class="note">
+              The first public SCOS Builder release is now available. It builds a SCOS Standard installation ISO from a
+              user-provided Windows ISO and the official SCOS Build Package.
+            </p>
+            <div class="cta">
+              <a href="../news/scos-standard-public-beta.html" class="btn btn-ghost">Read More</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="badge inline">Build Package</div>
+            <h3>SCOS Build Package v0.3.6.4 goes public</h3>
+            <p class="note">
+              The official build package contains the setup files, unattended configuration, and Standard edition
+              lockdown markers used by SCOS Builder.
+            </p>
+            <div class="cta">
+              <a href="../news/scos-standard-public-beta.html" class="btn btn-ghost">Read More</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="badge inline">Development</div>
+            <h3>Why SCOS uses Builder instead of direct ISO downloads</h3>
+            <p class="note">
+              SCOS does not distribute Windows. SCOS Builder lets users create a SCOS ISO locally from their own official
+              Windows ISO, keeping the project cleaner and safer.
+            </p>
+            <div class="cta">
+              <a href="../news/scos-standard-public-beta.html#why-builder" class="btn btn-ghost">Read More</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="badge inline">Roadmap</div>
+            <h3>What’s next for SCOS</h3>
+            <p class="note">
+              Upcoming work includes time zone selection, internet clock sync, a driver setup phase, GPU driver update
+              support, and optional Recovery Environment integration.
+            </p>
+            <div class="cta">
+              <a href="../news/scos-standard-public-beta.html#whats-next" class="btn btn-ghost">Read More</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section id="categories">
+      <div class="container">
+        <h2>Categories</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Release Notes</h3>
+            <p class="note">Public release announcements and version updates.</p>
+          </div>
+          <div class="card">
+            <h3>Development Updates</h3>
+            <p class="note">Progress on Builder, setup, restrictions, drivers, and recovery.</p>
+          </div>
+          <div class="card">
+            <h3>Project Direction</h3>
+            <p class="note">Posts explaining SCOS design choices and long-term goals.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>© <span id="year"></span> SCOS Project. All rights reserved.</div>
+      <div>SCOS is independent and not affiliated with Microsoft, Valve, Steam, or any third-party launcher.</div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

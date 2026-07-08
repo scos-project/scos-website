@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SCOS Standard Public Beta is now available — SCOS News</title>
+  <meta name="description"
+    content="SCOS Standard Public Beta is now available through SCOS Builder v0.1.2 and the SCOS Build Package v0.3.6.4." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div class="nav">
+    <div class="container nav-inner">
+      <nav class="links" aria-label="Primary">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../pages/download.html" class="nav-link">Download</a>
+        <a href="../pages/news.html" class="nav-link">News</a>
+        <a href="../pages/features.html" class="nav-link">Features</a>
+        <a href="../pages/docs.html" class="nav-link">Documentation</a>
+        <a href="../pages/faq.html" class="nav-link">FAQ</a>
+        <a href="../pages/contact.html" class="nav-link">Contact</a>
+      </nav>
+      <span class="badge">SCOS Standard Public Beta: available now</span>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero article-hero">
+      <div class="container article-container">
+        <div class="badge inline">Public Beta Announcement</div>
+        <h1 class="title">SCOS Standard Public Beta is now available</h1>
+        <p class="subtitle">
+          SCOS has reached its first public milestone. With <strong>SCOS Builder v0.1.2</strong>, users can now create a
+          SCOS Standard installation ISO from their own official Windows ISO.
+        </p>
+        <p class="disclaimer">
+          SCOS is independent and not affiliated with Microsoft, Valve, Steam, or any third-party launcher.
+        </p>
+      </div>
+    </section>
+
+    <!-- ARTICLE -->
+    <section id="article" class="article-section">
+      <div class="container article-container">
+        <article class="article-content">
+          <p class="article-meta">
+            <strong>Release:</strong> SCOS Builder v0.1.2 · SCOS Build Package v0.3.6.4 · Standard Edition · Stable channel
+          </p>
+
+          <h2>A first public milestone for SCOS</h2>
+          <p>
+            Today marks the first public milestone for SCOS. The project now has a public build pipeline through
+            <strong>SCOS Builder</strong>, allowing users to create a SCOS Standard installation ISO locally from their
+            own official Windows ISO.
+          </p>
+
+          <p>
+            SCOS Standard is a Windows-based Steam console environment for living-room gaming. It is designed to boot
+            into <strong>Steam Big Picture / Steam Gamepad UI</strong> as the main shell, while restricting normal
+            Windows desktop access in the public Standard edition.
+          </p>
+
+          <h2>What is included in this public beta?</h2>
+          <ul>
+            <li><strong>SCOS Builder v0.1.2</strong>, the public tool used to create SCOS installation ISOs.</li>
+            <li><strong>SCOS Build Package v0.3.6.4</strong>, the official setup package downloaded by Builder.</li>
+            <li><strong>SCOS Standard Edition</strong>, the public locked-down console environment.</li>
+            <li><strong>Steam shell behavior</strong>, using Steam Big Picture / Steam Gamepad UI as the final shell.</li>
+            <li><strong>Standard restrictions</strong>, including reduced access to normal desktop tools.</li>
+          </ul>
+
+          <h2 id="why-builder">Why SCOS uses Builder instead of direct ISO downloads</h2>
+          <p>
+            SCOS does not include, provide, sell, or activate Windows. Because of that, the public release uses
+            <strong>SCOS Builder</strong> instead of distributing a ready-made Windows ISO.
+          </p>
+
+          <p>
+            With this approach, users provide their own official Windows ISO. SCOS Builder then downloads the official
+            SCOS Build Package from GitHub, injects the SCOS setup files, replaces required setup placeholders, and
+            rebuilds the final bootable SCOS installation ISO.
+          </p>
+
+          <div class="callout">
+            SCOS Builder keeps the project cleaner: SCOS provides the console environment and setup package, while users
+            provide their own official Windows ISO and handle Windows activation separately.
+          </div>
+
+          <h2>What SCOS Standard does</h2>
+          <p>
+            SCOS Standard is focused on one goal: making a Windows-based gaming system feel closer to a living-room
+            console.
+          </p>
+
+          <ul>
+            <li>Boot into a Steam-focused console environment.</li>
+            <li>Use Steam Big Picture / Steam Gamepad UI as the main shell.</li>
+            <li>Restrict normal Windows desktop access in the public Standard edition.</li>
+            <li>Keep Windows compatibility for games, launchers, drivers, and anti-cheat systems that expect Windows.</li>
+          </ul>
+
+          <h2>Important notes</h2>
+          <ul>
+            <li>SCOS is currently a <strong>public beta</strong>.</li>
+            <li>SCOS does <strong>not</strong> include Windows.</li>
+            <li>You must provide your own official Windows ISO.</li>
+            <li>Windows activation remains separate from SCOS.</li>
+            <li>When creating a bootable USB from a SCOS ISO, do not enable extra Windows customization options.</li>
+          </ul>
+
+          <h2 id="whats-next">What’s next?</h2>
+          <p>
+            The next development steps focus on improving setup reliability, hardware preparation, and Builder-based
+            customization.
+          </p>
+
+          <ul>
+            <li><strong>SCOS Builder v0.1.3:</strong> Time zone selection and SCOS configuration options.</li>
+            <li><strong>SCOS v0.3.6.5:</strong> Time zone and internet clock sync improvements.</li>
+            <li><strong>SCOS v0.3.7:</strong> Driver setup phase foundation.</li>
+            <li><strong>SCOS v0.3.8:</strong> GPU driver update support.</li>
+            <li><strong>Future:</strong> Optional SCOS Recovery Environment integration through Builder.</li>
+          </ul>
+
+          <div class="cta">
+            <a href="../pages/download.html" class="btn btn-primary">Download SCOS Builder</a>
+            <a href="../pages/docs.html" class="btn btn-ghost">Read Documentation</a>
+            <a href="../pages/news.html" class="btn btn-ghost">Back to News</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>© <span id="year"></span> SCOS Project. All rights reserved.</div>
+      <div>SCOS is independent and not affiliated with Microsoft, Valve, Steam, or any third-party launcher.</div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>
