@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>News — SCOS</title>
   <meta name="description"
-    content="Latest SCOS news, release announcements, development updates, and public beta progress." />
+    content="Latest SCOS news, release announcements, development updates, platform news, and public beta progress." />
   <link rel="stylesheet" href="../style.css" />
 </head>
 
@@ -34,7 +34,7 @@
         <div class="badge inline">Project Updates</div>
         <h1 class="title">SCOS News</h1>
         <p class="subtitle">
-          Official updates about SCOS Standard, SCOS Builder, public beta releases, development progress, and upcoming features.
+          Official updates about SCOS Standard, SCOS Builder, public beta releases, development progress, platform news, and upcoming features.
         </p>
         <p class="disclaimer">
           SCOS is independent and not affiliated with Microsoft, Valve, Steam, or any third-party launcher.
@@ -47,19 +47,19 @@
       <div class="container">
         <h2>Featured</h2>
         <div class="card">
-          <div class="badge inline">Public Beta</div>
-          <h3>SCOS Standard Public Beta is now available</h3>
+          <div class="badge inline">Platform News</div>
+          <h3>Valve releases official Windows drivers for Steam Machine</h3>
           <p class="note">
-            SCOS has reached its first public milestone. With SCOS Builder v0.1.2, users can now create a SCOS Standard
-            installation ISO from their own official Windows ISO.
+            Valve has released official Windows drivers for Steam Machine, making Windows installation possible on the
+            new Steam hardware while official dual-boot support is still missing.
           </p>
           <p class="note">
-            This release introduces the first public build pipeline for SCOS Standard, using the official SCOS Build
-            Package v0.3.6.4.
+            For SCOS, this is an important moment for Steam users who want a living-room console experience while keeping
+            the full compatibility of their Windows games, launchers, drivers, and anti-cheat systems.
           </p>
           <div class="cta">
-            <a href="../news/scos-standard-public-beta.html" class="btn btn-primary">Read Article</a>
-            <a href="../pages/download.html" class="btn btn-ghost">Download SCOS Builder</a>
+            <a href="../news/valve-windows-drivers-steam-machine.html" class="btn btn-primary">Read Article</a>
+            <a href="../pages/features.html" class="btn btn-ghost">Explore SCOS Features</a>
           </div>
         </div>
       </div>
@@ -72,11 +72,23 @@
 
         <div class="cards">
           <article class="card">
-            <div class="badge inline">Release</div>
-            <h3>SCOS Builder v0.1.2 released</h3>
+            <div class="badge inline">Platform News</div>
+            <h3>Valve releases official Windows drivers for Steam Machine</h3>
             <p class="note">
-              The first public SCOS Builder release is now available. It builds a SCOS Standard installation ISO from a
-              user-provided Windows ISO and the official SCOS Build Package.
+              Windows drivers for Steam Machine make Windows installation possible on Valve's Steam hardware. This is
+              important for Steam users who want full game compatibility in the living room.
+            </p>
+            <div class="cta">
+              <a href="../news/valve-windows-drivers-steam-machine.html" class="btn btn-ghost">Read More</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="badge inline">Public Beta</div>
+            <h3>SCOS Standard Public Beta is now available</h3>
+            <p class="note">
+              SCOS has reached its first public milestone. With SCOS Builder v0.1.2, users can now create a SCOS Standard
+              installation ISO from their own official Windows ISO.
             </p>
             <div class="cta">
               <a href="../news/scos-standard-public-beta.html" class="btn btn-ghost">Read More</a>
@@ -84,14 +96,26 @@
           </article>
 
           <article class="card">
-            <div class="badge inline">Build Package</div>
-            <h3>SCOS Build Package v0.3.6.4 goes public</h3>
+            <div class="badge inline">Release</div>
+            <h3>SCOS Builder v0.1.3 adds timezone support</h3>
             <p class="note">
-              The official build package contains the setup files, unattended configuration, and Standard edition
-              lockdown markers used by SCOS Builder.
+              SCOS Builder v0.1.3 adds timezone selection, generates the SCOS timezone marker, and introduces the new
+              SCOS Builder application icon.
             </p>
             <div class="cta">
-              <a href="../news/scos-standard-public-beta.html" class="btn btn-ghost">Read More</a>
+              <a href="../pages/download.html" class="btn btn-ghost">Download Builder</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="badge inline">Build Package</div>
+            <h3>SCOS Build Package v0.3.6.5 adds timezone setup</h3>
+            <p class="note">
+              The new build package can read the timezone marker generated by Builder and applies the selected Windows
+              timezone during SCOS setup.
+            </p>
+            <div class="cta">
+              <a href="../pages/download.html" class="btn btn-ghost">View Download</a>
             </div>
           </article>
 
@@ -111,8 +135,8 @@
             <div class="badge inline">Roadmap</div>
             <h3>What’s next for SCOS</h3>
             <p class="note">
-              Upcoming work includes time zone selection, internet clock sync, a driver setup phase, GPU driver update
-              support, and optional Recovery Environment integration.
+              Upcoming work includes driver setup foundations, GPU driver update support, improved setup reliability,
+              and optional Recovery Environment integration.
             </p>
             <div class="cta">
               <a href="../news/scos-standard-public-beta.html#whats-next" class="btn btn-ghost">Read More</a>
@@ -134,6 +158,10 @@
           <div class="card">
             <h3>Development Updates</h3>
             <p class="note">Progress on Builder, setup, restrictions, drivers, and recovery.</p>
+          </div>
+          <div class="card">
+            <h3>Platform News</h3>
+            <p class="note">News about Steam, Windows gaming, living-room PCs, and compatibility topics related to SCOS.</p>
           </div>
           <div class="card">
             <h3>Project Direction</h3>
